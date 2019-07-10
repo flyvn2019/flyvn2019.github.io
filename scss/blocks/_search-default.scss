@@ -1,0 +1,59 @@
+.search-default {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: calc(100% - 30px);
+  height: 350px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: $brown;
+  padding: 15px;
+  @include breakpoint(sm){
+    width: 300px;
+    left:15px;
+    transform: none;
+  }
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background-color: #321920;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background:$orange;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $orange;
+  }
+  &__title {
+    margin-bottom: 5px;
+    h5 {
+      color:$orange;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  &__content {
+    margin-bottom: 20px;
+    li {
+      a {
+        font-size: 12px;
+        color: #fff!important;
+        display: inline-block;
+        cursor: pointer;
+        &:hover{
+          color: $orange!important;
+        }
+      }
+    }
+  }
+}

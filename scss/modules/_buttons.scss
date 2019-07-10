@@ -1,0 +1,77 @@
+.btn{
+  font-size: 14px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 6px;
+}
+.btn-purple{
+  background-color: $main-color;
+  color: $white-1!important;
+  &:hover{
+    color: $white-1;
+    background-color:$main-color;
+  }
+  &:active, &:focus{
+    box-shadow: 0 0 0 0.2rem rgba(106, 40, 250, 0.5);
+  }
+}
+.btn-orange{
+  background-color: $orange;
+  color: $white-1!important;
+  &:hover{
+    color: $white-1;
+    background-color:$orange;
+  }
+  &:active, &:focus{
+    box-shadow: 0 0 0 0.2rem rgba(241, 135, 33, 0.5);
+  }
+}
+.btn-brown{
+  background-color: $brown;
+  color: $white-1!important;
+  &:hover{
+    color: $white-1;
+    background-color:$brown;
+  }
+  &:active, &:focus{
+    box-shadow: 0 0 0 0.2rem rgba(68, 38, 44, 0.5);
+  }
+}
+.btn-disable{
+  pointer-events:none;
+  opacity: .5;
+}
+.btn-round{
+  border-radius: 60px;
+}
+.btn-outline{
+  background-color: #fff;
+  border:1px solid $main-color;
+  color: $main-color;
+}
+.btn-gray{
+  background-color: #BEBEBE;
+  color: #fff!important;
+}
+button.close{
+  width: 20px;
+  height: 20px;
+  line-height:21px;
+  background-color: $orange;
+  border-radius: 50%;
+  opacity: 1;
+  text-shadow: none;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  &:focus,
+  &:active{
+    outline: none;
+  }
+  &:hover{
+    opacity: 1;
+    color: $brown;
+  }
+}

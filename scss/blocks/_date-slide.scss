@@ -1,0 +1,68 @@
+.date-slide{
+  &__col{
+    padding: 0 5px;
+  }
+  &__item{
+    color: #6d6e71;
+    background-color: #e7e8e9;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    p{
+      width: 100%;
+    }
+    .p1{
+      font-size: 10px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .p2{
+      font-size: 10px;
+    }
+    .p3{
+      font-size: 14px;
+      font-weight: bold;
+    }
+    &.active{
+      background-color: $orange;
+      color: #fff;
+    }
+  }
+  &__text{
+    text-align: center;
+  }
+  .slick-list{
+    width: calc(100% - 30px);
+    margin:auto;
+    @include breakpoint(sm){
+      width: calc(100% - 60px);
+    }
+  }
+  .slick-arrow{
+    height: 100%;
+    width:20px;
+    background-color: #939598;
+    @include breakpoint(sm){
+      width: 35px;
+    }
+    &:before{
+      color: #fff;
+      font-size: 14px;
+      @include breakpoint(sm){
+        font-size: 18px;
+      }
+    }
+  }
+  .slick-prev{
+    &:before{
+      content: '\f0a8';
+    }
+  }
+  .slick-next{
+    &:before{
+      content: '\f0a9';
+    }
+  }
+}

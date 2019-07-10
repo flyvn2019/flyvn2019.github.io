@@ -1,0 +1,68 @@
+select.form-control:not([size]):not([multiple]){
+  height: auto;
+}
+.form-group{
+  label{
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    span{
+      color: red;
+      padding-left: 3px;
+    }
+  }
+}
+select.form-control{
+  background: url("../images/i-sort.svg") no-repeat center right 10px;
+  background-size: 10px;
+}
+.form-control{
+  border: 1px solid #adadad;
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: $regular;
+  color: $black-1;
+  letter-spacing: -0.41px;
+  &:focus{
+    color: $black-1;
+    border-color: $main-color;
+    outline: 0;
+    box-shadow: none;
+  }
+  &:active{
+    border-color: $main-color;
+  }
+  &::-webkit-input-placeholder {
+    color:#8F8E94;
+  }
+  &::-moz-placeholder {
+    color:#8F8E94;
+  }
+  &:-ms-input-placeholder {
+    color:#8F8E94;
+  }
+  &:-moz-placeholder {
+    color:#8F8E94;
+  }
+
+}
+.list-icon{
+  &__item{
+    display: inline-block;
+    margin-right: 10px;
+    svg{
+      width: 15px;
+      margin-right:5px;
+      fill:$orange;
+    }
+    span{
+      font-size: 12px;
+      color: #000;
+    }
+    svg,span{
+      vertical-align: middle;
+    }
+  }
+}

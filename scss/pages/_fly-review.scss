@@ -1,0 +1,367 @@
+.box-title {
+  background-color: $brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  @include breakpoint(xs){
+    margin: 0 -15px;
+  }
+  @include breakpoint(sm) {
+    justify-content: space-between;
+  }
+  svg {
+    width: 20px;
+    margin-right: 10px;
+    @include breakpoint(sm) {
+      width: auto;
+      height: auto;
+    }
+  }
+  p {
+    font-size: $size-15;
+    color: $orange;
+    @include breakpoint(sm) {
+      flex: 1 1 auto;
+      font-size: $size-24;
+    }
+  }
+}
+.price-box {
+  &__content {
+    padding: 15px 0;
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+    }
+  }
+  &__group {
+    @include breakpoint(sm){
+      width: 50%;
+    }
+    &.group-left{
+      @include breakpoint(sm){
+        padding-right: 15px;
+      }
+    }
+    &.group-right{
+      @include breakpoint(xs){
+        padding-top: 15px;
+        margin-top: 15px;
+        border-top: 1px solid #ddd;
+      }
+      @include breakpoint(sm){
+        padding-left: 15px;
+        border-left: 1px solid #ddd;
+      }
+    }
+  }
+  &__total{
+    margin-bottom: 15px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    .item-left{
+      padding-right: 10px;
+    }
+    .item-right{
+      .p1{
+        font-weight: 600;
+      }
+    }
+    p{
+      color: #000;
+    }
+    .p1{
+      font-size: 14px;
+      @include breakpoint(sm){
+        font-size: 16px;
+      }
+    }
+    .p2{
+      font-size: 10px;
+      line-height: 15px;
+      @include breakpoint(sm){
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+    .p3{
+      font-size: 12px;
+      @include breakpoint(sm){
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.itinerary-box {
+  &__content {
+    padding: 15px 0;
+    color: #000;
+    @include breakpoint(sm){
+      padding: 15px;
+    }
+    &__top {
+      display: flex;
+      svg {
+        width: 20px;
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include breakpoint(sm) {
+        width: 50%;
+        padding-right: 15px;
+      }
+      p {
+        font-size: $size-12;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+      }
+      i {
+        padding-right: 5px;
+      }
+    }
+    &__from {
+      padding-left: 5px;
+      p {
+        font-size: $size-18;
+      }
+      span {
+        display: block;
+        font-size: $size-12;
+      }
+    }
+    &__left {
+      padding: 15px 0;
+      border-bottom: 1px solid #e4e4e4;
+      @include breakpoint(sm) {
+        border-bottom: none;
+        width: 50%;
+        padding-right: 15px;
+      }
+      p {
+        font-size: $size-12;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+      }
+    }
+    &__right {
+      padding: 15px 0;
+      @include breakpoint(sm) {
+        width: 50%;
+        padding-left: 15px;
+      }
+      p, span {
+        font-size: $size-12;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+      }
+    }
+    &__place {
+      background-color: #fdda3a;
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      margin: 0 -15px;
+      .place-left {
+        text-align: center;
+        font-size: $size-12;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+        i {
+          color: #808080;
+        }
+        span {
+          display: block;
+          color: $black-1;
+        }
+      }
+      .place-right {
+        padding-left: 10px;
+        span {
+          display: block;
+          font-size: $size-12;
+          @include breakpoint(sm) {
+            font-size: $size-14;
+          }
+        }
+      }
+    }
+    &__group {
+      @include breakpoint(sm) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__detail {
+      display: flex;
+    }
+  }
+}
+.adult-box {
+  &__content {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(sm){
+      padding: 15px;
+    }
+    &__svg {
+      @include add-border(3px,$orange,all);
+      padding: 0 8px;
+      svg {
+        width: 20px;
+      }
+    }
+    &__left {
+      display: flex;
+      align-items:center ;
+      border-right: 1px solid #e4e4e4;
+      padding-right: 15px;
+      @include breakpoint(sm) {
+        width: 50%;
+      }
+      .p1 {
+        text-transform: uppercase;
+        font-size: $size-12;
+        color: #000;
+        padding-left: 6px;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+       }
+    }
+    &__right {
+      @include breakpoint(sm) {
+        width: 50%;
+        padding-left: 15px;
+      }
+      p {
+        text-transform: uppercase;
+        font-size: $size-12;
+        color: #000;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+      }
+    }
+  }
+}
+.baggage-box {
+  &__content {
+    padding:15px 0;
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+    &__top {
+      @include breakpoint(sm) {
+        width: 50%;
+        padding-right: 15px;
+      }
+      p{
+        color: #000;
+      }
+      .p1  {
+        font-size: $size-12;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+      }
+      .p2{
+        font-size: 14px;
+        font-weight: 600;
+        @include breakpoint(sm){
+          font-size: 16px;
+        }
+      }
+    }
+    &__item {
+      padding: 15px 0;
+      p {
+        font-size: $size-12;
+        color: #000;
+        @include breakpoint(sm) {
+          font-size: $size-14;
+        }
+      }
+    }
+    &__group {
+      @include breakpoint(sm) {
+        width: 50%;
+        padding-left: 15px;
+      }
+    }
+  }
+  &__attention {
+    width: 100%;
+    p,span {
+      font-size: $size-12;
+      color: #000;
+    }
+    span {
+      display: block;
+    }
+  }
+
+}
+.baggage-item {
+  display: flex;
+  align-items: center;
+  &__left {
+    span{
+      font-size: 40px;
+      padding-right: 10px;
+      color: $orange;
+    }
+  }
+  &__right {
+    padding-left: 25px;
+    p,span {
+      font-size: $size-12;
+      color: #000;
+      @include breakpoint(sm) {
+        font-size: $size-14;
+      }
+    }
+    p{
+      text-transform: uppercase;
+    }
+    span {display: block;}
+  }
+}
+.fly-review {
+  &__main{
+    margin-bottom: 30px;
+  }
+  &__price,
+  &__itinerary,
+  &__adult,
+  &__baggage{
+    @include breakpoint(sm){
+      box-shadow: $shadow;
+      margin-bottom: 30px;
+    }
+  }
+  &__btn {
+    padding-top: 20px;
+    text-align: center;
+    @include breakpoint(sm) {
+      text-align: right;
+    }
+  }
+}

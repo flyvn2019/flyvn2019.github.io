@@ -1,0 +1,835 @@
+.p-show-detail{
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  &:hover{
+    text-decoration: underline;
+  }
+  i{
+    margin-right: 5px;
+    transition: .3s;
+  }
+}
+.seat-item{
+  text-align: center;
+  height: 100%;
+  &__title{
+    height: 70px;
+    padding: 10px;
+    p{
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+  &__content{
+    p{
+      color: #fff;
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+.place-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+  @include breakpoint(sm){
+    width: 50%;
+    padding:0;
+    height: 67px;
+  }
+  &__start,
+  &__end{
+    color: #231f20;
+    strong{
+      font-size: 20px;
+    }
+    p{
+      font-size: 15px;
+    }
+  }
+  &__icon{
+    padding: 0 10px;
+  }
+  &__end{
+    text-align: right;
+  }
+}
+.booking-box{
+  @include breakpoint(xs){
+    display: none;
+  }
+  @include breakpoint(sm){
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__btn{
+    width: 250px;
+    height: 67px;
+    line-height: 67px;
+    background-color:#f28820;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 40px;
+    cursor: pointer;
+    span{
+      font-size: 20px;
+    }
+    i{
+
+    }
+  }
+  &__dropdown{
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #666;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    width: 250px;
+    display: none;
+  }
+  &.open-dropdown{
+    .booking-box__btn{
+      i{
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.booking-info{
+  color: #231f20;
+  font-size: 14px;
+  padding: 0 15px;
+  &__item{
+    border-bottom: 1px solid #231f20;
+    padding: 10px 0;
+    .p1{
+      font-size: 16px;
+    }
+    .p2{
+      font-size: 12px;
+      color: #939598;
+    }
+    .p3{
+      margin-bottom: 5px;
+    }
+    .orange{
+      margin-bottom: 5px;
+    }
+    .pnote{
+      color: #000;
+      span{
+        color: $orange;
+      }
+    }
+  }
+  &__total{
+    padding: 10px 0;
+    .d-flex{
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .p1{
+      font-size: 18px;
+      color: $orange;
+      text-transform: uppercase;
+    }
+    .p2{
+      font-size: 12px;
+    }
+    .p3{
+      font-size: 12px;
+      color: #000;
+    }
+  }
+  &__btn{
+    margin: 0 -15px;
+    a{
+      display: block;
+      background-color: $brown;
+      color: $orange!important;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 28px;
+      padding: 20px 0;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.trip-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  &__start,
+  &__end{
+    width: 35%;
+    p{
+      color: #000;
+    }
+    .p1{
+      font-size: 15px;
+      font-weight: bold;
+      @include breakpoint(sm){
+        font-size: 18px;
+      }
+    }
+    .p2{
+      font-size:11px;
+      @include breakpoint(sm){
+        font-size: 14px;
+      }
+    }
+  }
+  &__end{
+    text-align: right;
+  }
+  &__icon{
+    text-align: center;
+    width: 30%;
+    i{
+      color: #939598;
+    }
+    p{
+      color: #939598;
+      font-size: 11px;
+      @include breakpoint(sm){
+        font-size: 14px;
+      }
+    }
+    .p2{
+      span{
+        padding-right: 5px;
+      }
+    }
+  }
+  &__line{
+    width: 30%;
+    text-align: center;
+    padding: 0 5px;
+    p{
+      font-size: 12px;
+      color: #000;
+    }
+    .p1{
+      margin-bottom: 5px;
+    }
+    .p2{
+      margin-top: 5px;
+    }
+    .straight-line{
+      width: 100%;
+      height: 2px;
+      background-color: #231f20;
+      position: relative;
+      &:before{
+        content: '●';
+        position: absolute;
+        top: -4px;
+        left: -5px;
+        line-height: 8px;
+      }
+      &:after{
+        content: '●';
+        position: absolute;
+        top: -4px;
+        right: -5px;
+        line-height: 8px;
+      }
+    }
+  }
+}
+.detail-box{
+  &__title{
+    margin-bottom: 20px;
+    h5{
+      font-size: 18px;
+      color: #000;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__name{
+    p{
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #000;
+      font-weight: 600;
+    }
+  }
+  &__item{
+    padding: 10px 0;
+    @include breakpoint(sm){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__airline{
+    text-align: center;
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+      text-align: left;
+      width: 30%;
+      padding-right: 10px;
+    }
+    p{
+      padding-left: 10px;
+      font-size: 12px;
+      color: #666;
+      span{
+        display: block;
+      }
+    }
+  }
+  &__trip{
+    @include breakpoint(sm){
+      width: 70%;
+      padding-left: 10px;
+    }
+    .trip-box{
+      padding: 0;
+      &__start,
+      &__end{
+        p{
+          font-size: 12px;
+          color: #000;
+        }
+      }
+    }
+  }
+  &__time{
+    background-color: #ffdd18;
+    text-align: center;
+    padding: 5px 10px;
+    p{
+      font-size: 12px;
+      color: #000;
+    }
+  }
+}
+.ticket-box{
+  padding-bottom: 15px;
+  &__header{
+    background-color: #e7e8e9;
+    padding: 10px;
+  }
+  &__show{
+
+  }
+  &__main{}
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    &.item-brown{
+      .ticket-box__type{
+        background-color: $brown;
+      }
+    }
+    &.item-orange{
+      .ticket-box__type{
+        background-color: $orange;
+      }
+    }
+    &.active{
+      .ticket-box__check{
+        border-color: $orange;
+        i{
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 125px);
+    height: 100%;
+    padding-right: 15px;
+    border-bottom: 1px solid #666;
+    .p-soldout{
+      font-size: 18px;
+      color: $brown;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__check{
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #9c9c9c;
+    i{
+      color: $orange;
+      visibility: hidden;
+    }
+  }
+  &__price{
+    text-align: center;
+    p{
+      color: $orange;
+    }
+    .p1{
+      font-size: 12px;
+    }
+    .p2{
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  &__chair{
+    p{
+      font-size: 12px;
+      color: $brown;
+      font-weight: bold;
+    }
+  }
+  &__type{
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+    p{
+      font-size: 10px;
+      color: #fff;
+    }
+    svg{
+      fill: #fff;
+      width: 15px;
+    }
+  }
+  &__detail{
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+    display: none;
+  }
+  &.open-detail{
+    .ticket-box__show{
+      .p-show-detail{
+        i{
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+.ticket-table{
+  &__header{
+    .ticket-table__left{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ticket-table__right{
+      .ticket-table__col{
+        &:nth-child(2n+1){
+          .ticket-table__type{
+            background-color: $brown;
+          }
+        }
+        &:nth-child(2n){
+          .ticket-table__type{
+            background-color: $orange;
+          }
+        }
+      }
+    }
+  }
+  &__body{
+    .ticket-table__row{
+
+    }
+    .ticket-table__right{
+
+    }
+    .ticket-table__left{
+      padding: 15px;
+      .trip-box{
+        padding: 0;
+      }
+    }
+    .ticket-table__col{
+      &:last-child{
+        .ticket-table__cell{
+          border-right: none;
+        }
+      }
+      &:nth-child(2n+1){
+        .ticket-table__cell{
+          &.active{
+            background-color: $brown;
+            p{
+              color: #fff;
+            }
+            .ticket-table__label{
+              svg{
+                fill: #fff;
+              }
+            }
+            .ticket-table__check{
+              border-color: #fff;
+              i{
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2n){
+        .ticket-table__cell{
+          &.active{
+            background-color: $orange;
+            p{
+              color: #fff;
+            }
+            .ticket-table__label{
+              svg{
+                fill: #fff;
+              }
+            }
+            .ticket-table__check{
+              border-color: #fff;
+              i{
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__row{
+    display: flex;
+    width: 100%;
+  }
+  &__col{
+    border: 1px solid #ddd;
+    &.col_6{
+      width: calc(100%/6);
+    }
+    &.col_5{
+      width: calc(100%/5);
+    }
+    &.col_4{
+      width: calc(100%/4);
+    }
+    &.col_3{
+      width: calc(100%/3);
+    }
+  }
+  &__left{
+    width: 35%;
+    border: 0.5px solid #ddd;
+  }
+  &__right{
+    width: 65%;
+    display: flex;
+  }
+  &__type{
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p{
+      color: #fff;
+    }
+    .p1{
+      padding-bottom: 10px;
+      font-size: 14px;
+    }
+    .p2{
+      font-size: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #fff;
+      i,span{
+        vertical-align: middle;
+      }
+      i{
+        padding-right: 5px;
+      }
+    }
+  }
+  &__cell{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    .p1{
+      color: $orange;
+      font-size: 12px;
+    }
+    .p2{
+      color: $orange;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .p3{
+      font-size: 12px;
+      color: $brown;
+    }
+  }
+  &__label{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    svg{
+      width: 10px;
+      fill: $orange;
+    }
+  }
+  &__check{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #9c9c9c;
+    text-align: center;
+    border-radius: 50%;
+    margin:10px auto 0;
+    i{
+      font-size: 14px;
+      visibility: hidden;
+      color: #fff;
+    }
+  }
+  &__collapse{
+    display: none;
+    h5{
+      font-size: 18px;
+      padding: 15px;
+      color: #000;
+    }
+    .ticket-table__left{
+      padding: 70px 15px 0;
+      .icon-box{
+        text-align: right;
+        padding-bottom: 15px;
+      }
+    }
+    .ticket-table__col{
+      &:nth-child(2n){
+        .seat-item{
+          background-color: $orange;
+        }
+      }
+      &:nth-child(2n+1){
+        .seat-item{
+          background-color: $brown;
+        }
+      }
+    }
+  }
+  &__text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+    .d-left{
+      width: 35%;
+      text-align: right;
+      padding: 15px;
+      p{
+        font-size: 14px;
+        color: $orange;
+      }
+    }
+    .d-right{
+      width: 65%;
+      background-color: #feda3b;
+      padding: 15px;
+      p{
+        font-size: 12px;
+        color: #000;
+      }
+    }
+  }
+}
+.fly-item{
+  &__date{
+    background-color: $brown;
+    color: $orange;
+    text-align: center;
+    padding: 10px;
+    span{
+      text-transform: uppercase;
+      padding-left: 10px;
+      font-weight: bold;
+    }
+    span,svg{
+      vertical-align: middle;
+    }
+  }
+  &__suggestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    .list-icon,p{
+      @include breakpoint(xs){
+        width: 50%;
+      }
+    }
+    .list-icon{
+      @include breakpoint(xs){
+        display: flex;
+        justify-content: flex-end;
+      }
+      &__group{
+        @include breakpoint(xs){
+          display: inline-block;
+        }
+      }
+      &__item{
+        @include breakpoint(xs){
+          display: block;
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__fs{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    .dropdown{
+      width: 100%;
+    }
+    .dropdown-toggle{
+      width: 100%;
+      height:20px;
+      line-height:20px;
+      background-color: #e7e8e9;
+      border:none;
+      color: #58595b;
+      font-size: 10px;
+      text-align: left;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0 5px 0 15px;
+      @include breakpoint(sm){
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+      }
+      &:after{
+        float: right;
+        margin-top: 7px;
+        @include breakpoint(sm){
+          font-size: 20px;
+          margin-top: 22px;
+        }
+      }
+    }
+    .dropdown-menu{
+      width: 100%;
+    }
+  }
+  &__sort{
+    width: 50%;
+    padding-right: 5px;
+    @include breakpoint(sm){}
+  }
+  &__filter{
+    width: 50%;
+    padding-left: 5px;
+    @include breakpoint(sm){}
+  }
+  &__mobile{
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  &__desktop{
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+}
+.fly-list{
+  &__main{
+    position: relative;
+  }
+  &__item{
+    margin-bottom: 50px;
+  }
+  &__body{
+    margin-bottom: 30px;
+  }
+  &__btn{
+    text-align: center;
+    @include breakpoint(sm){
+      text-align: right;
+    }
+    .btn{
+      font-size: 18px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#seatItem,
+#seatItemBack{
+  table{
+    width: 100%;
+    th,td{
+      padding: 10px;
+    }
+    th{
+      text-align: right;
+      font-size: 14px;
+      p{
+        display: flex;
+        justify-content: flex-end;
+      }
+      i{
+        color: $orange;
+      }
+      span,i{vertical-align: middle}
+      span{
+        padding-right: 10px;
+      }
+    }
+    td{
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
+#homeSearch{
+  .modal-dialog{
+    @include breakpoint(md){
+      max-width: 900px;
+    }
+  }
+}

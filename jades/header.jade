@@ -1,0 +1,25 @@
+header.fly-header
+    .container
+        nav.navbar.navbar-expand-md
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+                i.fas.fa-align-left
+            a.navbar-brand(href='index.html')
+                img(src="images/logo.svg")
+            #collapsibleNavbar.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='index.html') Home
+                    li.nav-item
+                        a.nav-link(href='#') Book your trip
+                    li.nav-item
+                        a.nav-link(href='#') Flight Info
+                    li.nav-item
+                        a.nav-link(href='#') Before your fly
+            .fly-header__right
+                .fly-header__language
+                    img(src="images/lag-eng.png")
+                    i.fas.fa-caret-right
+                .fly-header__search
+                    i.fas.fa-search
+                    input(type='text')
+                    i.far.fa-times-circle

@@ -1,0 +1,339 @@
+- var page = "fly-list";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+
+    body(ontouchstart='')
+        include jades/header.jade
+        main.wrapper
+            section.fly-review
+                .fly-step
+                    .container
+                        .fly-step__row
+                            .fly-step__left
+                                //show desktop
+                                .d-none.d-sm-block
+                                    .step-box
+                                        .step-box__item
+                                            p 1. Select
+                                        .step-box__item.active
+                                            p 2. Book
+                                        .step-box__item
+                                            p 3. Pay
+                                //show-mobile
+                                .d-block.d-sm-none
+                                    .step-box
+                                        .step-box__item
+                                            p 2. Select
+                            .fly-step__right
+                                .edit-search
+                                    i.fas.fa-edit
+                                    span Edit search
+
+                .place-box-wrapper
+                    .container
+                        .place-box
+                            .place-box__start
+                                strong Hanoi (HAN)
+                                p Vietnam
+                            .place-box__icon
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='29', height='29', viewBox='0 0 29 29')
+                                    g
+                                        g
+                                            image(width='29', height='29', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAADIUlEQVRIS72WT0gUcRTHv2/800LuLGVGVDizFmIevNihjOoW9JcoKCrKLtKhIitpZ6Vig9odM0uyDkpQpBBEEOahLl2i6GQgkZHZ7khElwx3Jij/zYuZRlvXXGdW7Hca+H3f+/ze+7335kdwsfSotB4CbR6mBbeLQh8MFyYZJeTGgR6Tj4Jwl4jP+0MDV9zYZNK4gg41SkFhnOIAGLn5S8W6vm9zAbuCWgBdld8BKAfouqgkzv4XqBELdjDxITtaUygT6+N92YJdR5pskGuJccMGMbeL4YEj8w7VrwY3wuQXkyCTq8T6gdfZgF1H+l0tCeTC/AzA74Ceioq2bV6hdjE1BF+CecNfEO0SlUSXVzAlVWk7gTYJEDoKlPjbTA4MVW5m4FSKpltUtLWeoUZM3s+EdgB5yM0vytSDyYbgYWK+PwXCVCOGE3e8gO071VXpDEBNBLzxK1rlTA70qFwGAe/T9jX/osJSOtY96hb8BxpdUQghL+EUyWNR0fbYnREpz59wRJHeEY5AMHzyRwAlqQACXfAricvcWpmHrz+nF+fiEcKy/jHah3HLblJgqNJNBp10nA0C+AUgJ8U5ETDMQCGAhWlRWVFOjMZ/dYQPgI9A1QX5o12TAl2VqgB65TZFWep6QNySGulxBt2axRk7+677e4o/QptJ3JoSqdwLYA3A/QzUAjCJYaXFXswYBpEpEFoZKE47XCcTRQm8HCZPOxCDfAwaDKxKPLfu1RYYMWkvEz2yvgUIFTP1q36tdAnGRrS0O2XmnNJA+FO/25ST8yqw+qycGVsDYe3ZjC2jBncC/GRqyqhJDCXq3ALt6tXVYA3Ap8FoFsNaWybjpCpfIuBiimYI5uhqsf6LVe2uF1m9Z9MjMGez0mNSF4h2pOjCoqKps9ml77uuQn6IHCMuaQCtdJx4nkQTcNfQH43BCnOceyZPncXM9QzVG+RqMO45hln9XTxDjZjUwkQnHMPdoqJ1er1Lz1Bdla2nyToAWb8YPEGHYsWLBBKsgS5gDm8jT1DdGQpEeOAPaQezTasnaDImHyBClAVhS+Bc3Pqfzmn9BpxdFKdmdxVyAAAAAElFTkSuQmCC')
+                            .place-box__end
+                                strong Bangkok (BKK)
+                                p Thailand
+                .fly-review__main
+                    .container
+                        .fly-review__price
+                            .price-box
+                                .box-title
+                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='26', height='24', viewBox='0 0 26 24')
+                                        image(width='26', height='24', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAEMElEQVRIS6WWf2iUdRzH3+/vs81tt7ubGln+urvNVlgQ2i+R/omigiAyaxSZECUYmtCC3U0TFuZ2p/bjj4QZJYWVWpQsAjNDygoyg1GZ+Mdsd2usUta2u7lfd/d9x3O7wZpO7+r568vD+/15fX58nw8P8T+ewVjodkqrANws4BoKDog+Sr9a8jN/JH5kMjz/C2c4tmRhVpl2Acuv4O+D4SpfY9c3RYO055bSVH/fGQA1hSYpak3RoIHWxTWG5myhEFcnaVvRINeYjIZeAdRQIOyTYWdkbdGg/teC1bOfjw8kozV3ArYNwI0zAP8S1OCPJD4417y0qmjQYDS0htBGXyS+YqIt4FBs8VILs1CkLRHOeSqdM9zUOZarPhY8DIvxokH9u0IBJ6O4G4REc9bafdVN3b9NrSq5q+4qZsZXC2gBMEfCS0WDclm2BsMgogXOaK83HH/mX6A/d87zeDLld4C8TqCXsCNWPCvYE9VN3f1u4KHtoXmedNf5kZLaBZnSbBuE+wGY6VABHbT2Od/m7u+GX65dlAO5h3RJdgeB1QBKL5GpJXB0ZLTykYqKC7dJbBsaHV82v7l32NUOvrpwDsbKat2zkYl7N3een4yRjAZ/AHiOAzsCy43lj27LC2jFCMRNgF4EEQD4NgzetdnsKX+ke4CE/o7W+MuMDWWtVhNsBFAGaAuT0eBeAE8VAJmUvAPyEKT2gjzUTl840chUNLBB4BsFmdzrDBzwR+KP9zbPr6wqL3N97lKtnuZ3r/PX1pgNvuHyxFDFhdpcuwZjgScovndFmPQwafoE+3EJS5dVhjt7Jr+lgdeDfqOM8SV7BtgMO2VGPQROMdkaeMExdr8n/HvvYDTwAGFWEVqkiUsxCrCXwhFvU9dHE+sn8CbAdflAxyi2SfwpW6YxpEXHcJaytpbEYyCfzCfSwMFo6EtCd8tihX9z/MRMVSVbgjfA4DSBL2TtNhjz7RU7kKOw0dfUtZOpaKhe0MG8KSnwJGH/AJiGVALDuRBuBXB1XrPHF4mvd8+pWGCLxLUA6qZCCXQLPJoedRpYbukIdbkZDbXW3GNpPwVQcdksrVYCMm41jrTc05TouJz+fOx67yyN9RH4iqlYaKu1Zr+/6WxnanvtTdbJPkopBLIcwrCIBIjD/nD8+4kZhd4C9HQe8IuIvYbosMIYJUNiloAaivUC7nV1FJ5lsjXYDuJBkWv94a59M2WYigXukngMxOcWZquRded50eqZ7nc3vTeS2M1kLPgQhEMTAmUI/gygz0Ik6LjbNz+DXFsJrPdG4nuSLQvm0indKOA+CEsAzc7tcyBFwN3mx62c3W6n8r7cUN1s3wdw7cw91xDBdd5I/MB0jT6Ek+qum23G0o4nXdHP5tPjF1c25Y37+wRoJcQlRqi2RikKXaROVoUSx1mPbEFX+hKifwCw8sgtrymWOQAAAABJRU5ErkJggg==')
+                                    p Price
+                                .price-box__content
+                                    .price-box__group.group-left
+                                        .price-box__total
+                                            .price-box__item
+                                                .item-left
+                                                    p.p1 TOTAL
+                                                    p.p2 Round trip price for all travelers (including taxes, fees, charges and air transportation charges. Optional service fees)
+                                                .item-right
+                                                    p.p1
+                                                        | USD&nbsp;
+                                                        span.orange 4,936.0
+                                        .price-box__item
+                                            .item-left
+                                                p.p3 Air Transportation Charges
+                                            .item-right
+                                                p.p3 USD 4,744.0
+                                        .price-box__item
+                                            .item-left
+                                                p.p3 Taxes, Fees And Charges
+                                            .item-right
+                                                p.p3 USD 192.0
+                                    .price-box__group.group-right
+                                        .price-box__item
+                                            .item-left
+                                                p.p1 PRICE DETAILS
+                                            .item-right
+                                                p.p1 USD 4,936.0
+                                        .price-box__item
+                                            .item-left
+                                                p.orange.p3 1 Adult
+                                            .item-right
+                                                p.orange.p3 USD 4,936.0
+
+                        .fly-review__itinerary
+                            .itinerary-box
+                                .box-title
+                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='27', height='25', viewBox='0 0 27 25')
+                                        image(width='27', height='25', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAADa0lEQVRIS7WWXWgUVxTH/2cysiZhZ/ED/Erdu2tQsIJYWm2xLz5JGyoVio0NiqBi+6ClBd3dqDFBSWZsEGs/6Ke+pChCEUFDfFAQFRUVLRQrotkZTEXf3Jl8aDozp9w0H7PJzu6mtvM0c8///n9zzj33zhACV86IN5CPiJaxjgbH/6t7ChrZujhPQK1P+DCWMq+9LISbxdS+iPK24g3+UbWn5888WE4XxwmoH4b8xj43xhqtzn8D7T0oZvs+ugAsBfAYCtXnwaSpo4tPGPg2AOhm4qZYyvqlXKijJ9Yx+ASAgD/tnACThraRWAPm0+PMnzKhVUuY39A6eGFgWxfHAGzKixO6FJc2FYRJYa4t+QaRfxFAZb4x9xJRe58y0D5759O+kZjdmlwIxT8HQAT1zGiJZcxmORYKk8H+AwtecVVPNsrciZmwCyhHosnsLjsbryemjnGaHHx+R2u0ro6MF4VJ0ZMvZlVXepWXCFgWUrq/ACgAKkbjhM7oQNVaar47GJxTEjZaJj1xBuC6Uk3CRNtjqezXhXRlw4Y61RD7mDFU/wKXTV7Fyujuh7+HvdCkYHb7wplwB+8BmFHA8LqWNt8slnnZsJwuVhNwamJ3jto7XgTzp31mPnupzBxdHGbg01LrBV9ZpDV23w+F8aGayt4X6gomrFFY6ayODF6hz3sG/mn9mnnulIouMC3JM2BsA2E6gLa8PeVzXbHjjaShp6qbGWgZnvgcoPMg/y6YNgKYFTB8zoy1sYzZNfQiqpoFMGWs5XmLlrJ+LllGp3X+YlaUkwBeLSzmy16E3guuiW3EfwTTloD+oJY2UyVhI4Jcm1hPhO8AaGM7n/ZG09kD402eGcnXFfZvjI1zh5a2NpQNk8JePbHUB9+R9wT+Kpq2doQZ2IY4C8a7w/Gi7R/a+rYu5H5aRCic1Wgl9Hgdgc4MP2e1tJmcVGZS7LQlOpi4gYCPo2nz+2Jt7+jiFgOvAWDVrYhX7Xn4qJA+/BNjiB3E+JKYP4hmrF+LwWw9sRXgH6SGWVkey3QH1nFsZijMMeKrmOkCE94q9T/CR2ojTr8rt8EcZnwUy5jHJ5WZ/Icgj+dUZ6zbJU8O+bHVRQsBTUTUFE1l908KVg4gqOk3amtcdh+B+CctZW39X2HS3DbE+yrUm1WpBz2FYH8DrTw8wz4AD5gAAAAASUVORK5CYII=')
+                                    p Itinerary
+                                .itinerary-box__content
+                                    .itinerary-box__content__top
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='27', height='25', viewBox='0 0 27 25')
+                                            image(width='27', height='25', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAADa0lEQVRIS7WWXWgUVxTH/2cysiZhZ/ED/Erdu2tQsIJYWm2xLz5JGyoVio0NiqBi+6ClBd3dqDFBSWZsEGs/6Ke+pChCEUFDfFAQFRUVLRQrotkZTEXf3Jl8aDozp9w0H7PJzu6mtvM0c8///n9zzj33zhACV86IN5CPiJaxjgbH/6t7ChrZujhPQK1P+DCWMq+9LISbxdS+iPK24g3+UbWn5888WE4XxwmoH4b8xj43xhqtzn8D7T0oZvs+ugAsBfAYCtXnwaSpo4tPGPg2AOhm4qZYyvqlXKijJ9Yx+ASAgD/tnACThraRWAPm0+PMnzKhVUuY39A6eGFgWxfHAGzKixO6FJc2FYRJYa4t+QaRfxFAZb4x9xJRe58y0D5759O+kZjdmlwIxT8HQAT1zGiJZcxmORYKk8H+AwtecVVPNsrciZmwCyhHosnsLjsbryemjnGaHHx+R2u0ro6MF4VJ0ZMvZlVXepWXCFgWUrq/ACgAKkbjhM7oQNVaar47GJxTEjZaJj1xBuC6Uk3CRNtjqezXhXRlw4Y61RD7mDFU/wKXTV7Fyujuh7+HvdCkYHb7wplwB+8BmFHA8LqWNt8slnnZsJwuVhNwamJ3jto7XgTzp31mPnupzBxdHGbg01LrBV9ZpDV23w+F8aGayt4X6gomrFFY6ayODF6hz3sG/mn9mnnulIouMC3JM2BsA2E6gLa8PeVzXbHjjaShp6qbGWgZnvgcoPMg/y6YNgKYFTB8zoy1sYzZNfQiqpoFMGWs5XmLlrJ+LllGp3X+YlaUkwBeLSzmy16E3guuiW3EfwTTloD+oJY2UyVhI4Jcm1hPhO8AaGM7n/ZG09kD402eGcnXFfZvjI1zh5a2NpQNk8JePbHUB9+R9wT+Kpq2doQZ2IY4C8a7w/Gi7R/a+rYu5H5aRCic1Wgl9Hgdgc4MP2e1tJmcVGZS7LQlOpi4gYCPo2nz+2Jt7+jiFgOvAWDVrYhX7Xn4qJA+/BNjiB3E+JKYP4hmrF+LwWw9sRXgH6SGWVkey3QH1nFsZijMMeKrmOkCE94q9T/CR2ojTr8rt8EcZnwUy5jHJ5WZ/Icgj+dUZ6zbJU8O+bHVRQsBTUTUFE1l908KVg4gqOk3amtcdh+B+CctZW39X2HS3DbE+yrUm1WpBz2FYH8DrTw8wz4AD5gAAAAASUVORK5CYII=')
+                                        .itinerary-box__content__from
+                                            p Hanoi (HAN) - Bangkok (BKK)
+                                            span Thursday 20 December 2018
+                                    .itinerary-box__content__middle
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                        .itinerary-box__content__place
+                                            .place-left
+                                                i.far.fa-clock
+                                                span STOP
+                                            .place-right
+                                                span 10h10m
+                                                span Noibai International Airpot
+
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                    .itinerary-box__content__bottom
+                                        p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                            i.fas.fa-caret-right
+                                            span.orange Show flight details
+                                        p.text-right.orange Total Duration 13h55m, 1 stop
+                        .fly-review__itinerary
+                            .itinerary-box
+                                .box-title
+                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='27', height='25', viewBox='0 0 27 25')
+                                        image(width='27', height='25', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAADa0lEQVRIS7WWXWgUVxTH/2cysiZhZ/ED/Erdu2tQsIJYWm2xLz5JGyoVio0NiqBi+6ClBd3dqDFBSWZsEGs/6Ke+pChCEUFDfFAQFRUVLRQrotkZTEXf3Jl8aDozp9w0H7PJzu6mtvM0c8///n9zzj33zhACV86IN5CPiJaxjgbH/6t7ChrZujhPQK1P+DCWMq+9LISbxdS+iPK24g3+UbWn5888WE4XxwmoH4b8xj43xhqtzn8D7T0oZvs+ugAsBfAYCtXnwaSpo4tPGPg2AOhm4qZYyvqlXKijJ9Yx+ASAgD/tnACThraRWAPm0+PMnzKhVUuY39A6eGFgWxfHAGzKixO6FJc2FYRJYa4t+QaRfxFAZb4x9xJRe58y0D5759O+kZjdmlwIxT8HQAT1zGiJZcxmORYKk8H+AwtecVVPNsrciZmwCyhHosnsLjsbryemjnGaHHx+R2u0ro6MF4VJ0ZMvZlVXepWXCFgWUrq/ACgAKkbjhM7oQNVaar47GJxTEjZaJj1xBuC6Uk3CRNtjqezXhXRlw4Y61RD7mDFU/wKXTV7Fyujuh7+HvdCkYHb7wplwB+8BmFHA8LqWNt8slnnZsJwuVhNwamJ3jto7XgTzp31mPnupzBxdHGbg01LrBV9ZpDV23w+F8aGayt4X6gomrFFY6ayODF6hz3sG/mn9mnnulIouMC3JM2BsA2E6gLa8PeVzXbHjjaShp6qbGWgZnvgcoPMg/y6YNgKYFTB8zoy1sYzZNfQiqpoFMGWs5XmLlrJ+LllGp3X+YlaUkwBeLSzmy16E3guuiW3EfwTTloD+oJY2UyVhI4Jcm1hPhO8AaGM7n/ZG09kD402eGcnXFfZvjI1zh5a2NpQNk8JePbHUB9+R9wT+Kpq2doQZ2IY4C8a7w/Gi7R/a+rYu5H5aRCic1Wgl9Hgdgc4MP2e1tJmcVGZS7LQlOpi4gYCPo2nz+2Jt7+jiFgOvAWDVrYhX7Xn4qJA+/BNjiB3E+JKYP4hmrF+LwWw9sRXgH6SGWVkey3QH1nFsZijMMeKrmOkCE94q9T/CR2ojTr8rt8EcZnwUy5jHJ5WZ/Icgj+dUZ6zbJU8O+bHVRQsBTUTUFE1l908KVg4gqOk3amtcdh+B+CctZW39X2HS3DbE+yrUm1WpBz2FYH8DrTw8wz4AD5gAAAAASUVORK5CYII=')
+                                    p Itinerary
+                                .itinerary-box__content
+                                    .itinerary-box__content__top
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='27', height='25', viewBox='0 0 27 25')
+                                            image(width='27', height='25', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAADa0lEQVRIS7WWXWgUVxTH/2cysiZhZ/ED/Erdu2tQsIJYWm2xLz5JGyoVio0NiqBi+6ClBd3dqDFBSWZsEGs/6Ke+pChCEUFDfFAQFRUVLRQrotkZTEXf3Jl8aDozp9w0H7PJzu6mtvM0c8///n9zzj33zhACV86IN5CPiJaxjgbH/6t7ChrZujhPQK1P+DCWMq+9LISbxdS+iPK24g3+UbWn5888WE4XxwmoH4b8xj43xhqtzn8D7T0oZvs+ugAsBfAYCtXnwaSpo4tPGPg2AOhm4qZYyvqlXKijJ9Yx+ASAgD/tnACThraRWAPm0+PMnzKhVUuY39A6eGFgWxfHAGzKixO6FJc2FYRJYa4t+QaRfxFAZb4x9xJRe58y0D5759O+kZjdmlwIxT8HQAT1zGiJZcxmORYKk8H+AwtecVVPNsrciZmwCyhHosnsLjsbryemjnGaHHx+R2u0ro6MF4VJ0ZMvZlVXepWXCFgWUrq/ACgAKkbjhM7oQNVaar47GJxTEjZaJj1xBuC6Uk3CRNtjqezXhXRlw4Y61RD7mDFU/wKXTV7Fyujuh7+HvdCkYHb7wplwB+8BmFHA8LqWNt8slnnZsJwuVhNwamJ3jto7XgTzp31mPnupzBxdHGbg01LrBV9ZpDV23w+F8aGayt4X6gomrFFY6ayODF6hz3sG/mn9mnnulIouMC3JM2BsA2E6gLa8PeVzXbHjjaShp6qbGWgZnvgcoPMg/y6YNgKYFTB8zoy1sYzZNfQiqpoFMGWs5XmLlrJ+LllGp3X+YlaUkwBeLSzmy16E3guuiW3EfwTTloD+oJY2UyVhI4Jcm1hPhO8AaGM7n/ZG09kD402eGcnXFfZvjI1zh5a2NpQNk8JePbHUB9+R9wT+Kpq2doQZ2IY4C8a7w/Gi7R/a+rYu5H5aRCic1Wgl9Hgdgc4MP2e1tJmcVGZS7LQlOpi4gYCPo2nz+2Jt7+jiFgOvAWDVrYhX7Xn4qJA+/BNjiB3E+JKYP4hmrF+LwWw9sRXgH6SGWVkey3QH1nFsZijMMeKrmOkCE94q9T/CR2ojTr8rt8EcZnwUy5jHJ5WZ/Icgj+dUZ6zbJU8O+bHVRQsBTUTUFE1l908KVg4gqOk3amtcdh+B+CctZW39X2HS3DbE+yrUm1WpBz2FYH8DrTw8wz4AD5gAAAAASUVORK5CYII=')
+                                        .itinerary-box__content__from
+                                            p Hanoi (HAN) - Bangkok (BKK)
+                                            span Thursday 20 December 2018
+                                    .itinerary-box__content__middle
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                        .itinerary-box__content__place
+                                            .place-left
+                                                i.far.fa-clock
+                                                span STOP
+                                            .place-right
+                                                span 10h10m
+                                                span Noibai International Airpot
+
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                    .itinerary-box__content__bottom
+                                        p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                            i.fas.fa-caret-right
+                                            span.orange Show flight details
+                                        p.text-right.orange Total Duration 13h55m, 1 stop
+                        .fly-review__adult
+                            .adult-box
+                                .box-title
+                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='25', height='29', viewBox='0 0 25 29')
+                                        image(width='25', height='29', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAdCAYAAABfeMd1AAADQ0lEQVRIS6WWXWgcVRiGn3c2JtqaSYpEiobsbCr0ohIRL5RYqIiiiMWLYgiKN8W/okXq32yCyGIxMwmlSFBRg3eK+HMhVimIUHqh8aIQqCC1ttlZgoWowewMtjVN5pNVGmzp/sx6Ls+87/ucw5nvO0e0OJLAuwuHHWZ4oDOpcbR3rPx1K3a1IorD/DA4z4PdCWwGljCbJZd71315/stmGU0h1dB7TvBG/SAddIvlFxqBGkKqgXe/xOFmKwW95BbLB+rpGkLi0FsErm8OATo6+9wXT/5+JW1dSDw1+CBpekimEYf01Jo0KrjV4EaM3yTmDPuUFMPRd2a2v2es8mo2yGR+BtPj3eejnEqkjXYTh94KcMItRkMZId5XGA/8pS63z/8paQIx4Be3GPVnhORnDN23eq7j5utKp+J6ECvhJFd7Jwyr9BQr92aFTAkn6fbL+xvtwgwlU/ndwB2uX3kiEyQJvT2GDbvFymPN/q4kzE8bOucWIz8bZOKmPnNWD691cc+mfdFykzOZTeXs7fXnj2WC1MRx6H2OWHT96Kl6kGrg7ZPDw64fDbdVjH8cKORzqxZJdne3XzlyechyMDDoyDlNasPueGW2LUjNVA3zjwh9CHrSLZZnLgbFYWEn2BeIcdePgrZ613IwcNtVKN04VplLgvwuk97E+BWxBLhAv4mJHj+ajicLWw3b1ONH37d0JknojRr2DGg7sNI9GG3QCGs1cxJ4T6diCONnd0s0fXE+DvMLoH6DORnvuGPRe/+FXdK7qqH3kWD0stX8gOOMX+neSKa8HWZ6Hfvnnlkfhn3z5/kLD91QOnO2NrkOiSf/bSN1K1ssyHQcbAmjF7EN2FL3LIzj7lh0yzqkGhb2CptuVnRZvxt6q6dYflZ2sP+aZKWjVmydWUNa0Xes5gaUhIURwz5uxdCORrJXVA29twV72glo0XNIcVj4DGxXi4bsMjGrJCh8YLJHs7tbdBhHFQf53Ujvt2hpQ6YJ2SfkknnvW+D2NhIaWkwspJ0MrRdjNfBKjthpsBXY+D+AicFpwZG1Ll6r3UWXtJU4HNwu0m2IzWbqNMNQWnsk1B/mCNIUyRx0wWBRjp289uyGWZV+rL1i+BtaXUjRXhTXdwAAAABJRU5ErkJggg==')
+                                    p 1 Traveler/s (1 adult)
+                                .adult-box__content
+                                    .adult-box__content__left
+                                        .adult-box__content__svg
+                                            svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='25', height='29', viewBox='0 0 25 29')
+                                                image(width='25', height='29', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAdCAYAAABfeMd1AAADQ0lEQVRIS6WWXWgcVRiGn3c2JtqaSYpEiobsbCr0ohIRL5RYqIiiiMWLYgiKN8W/okXq32yCyGIxMwmlSFBRg3eK+HMhVimIUHqh8aIQqCC1ttlZgoWowewMtjVN5pNVGmzp/sx6Ls+87/ucw5nvO0e0OJLAuwuHHWZ4oDOpcbR3rPx1K3a1IorD/DA4z4PdCWwGljCbJZd71315/stmGU0h1dB7TvBG/SAddIvlFxqBGkKqgXe/xOFmKwW95BbLB+rpGkLi0FsErm8OATo6+9wXT/5+JW1dSDw1+CBpekimEYf01Jo0KrjV4EaM3yTmDPuUFMPRd2a2v2es8mo2yGR+BtPj3eejnEqkjXYTh94KcMItRkMZId5XGA/8pS63z/8paQIx4Be3GPVnhORnDN23eq7j5utKp+J6ECvhJFd7Jwyr9BQr92aFTAkn6fbL+xvtwgwlU/ndwB2uX3kiEyQJvT2GDbvFymPN/q4kzE8bOucWIz8bZOKmPnNWD691cc+mfdFykzOZTeXs7fXnj2WC1MRx6H2OWHT96Kl6kGrg7ZPDw64fDbdVjH8cKORzqxZJdne3XzlyechyMDDoyDlNasPueGW2LUjNVA3zjwh9CHrSLZZnLgbFYWEn2BeIcdePgrZ613IwcNtVKN04VplLgvwuk97E+BWxBLhAv4mJHj+ajicLWw3b1ONH37d0JknojRr2DGg7sNI9GG3QCGs1cxJ4T6diCONnd0s0fXE+DvMLoH6DORnvuGPRe/+FXdK7qqH3kWD0stX8gOOMX+neSKa8HWZ6Hfvnnlkfhn3z5/kLD91QOnO2NrkOiSf/bSN1K1ssyHQcbAmjF7EN2FL3LIzj7lh0yzqkGhb2CptuVnRZvxt6q6dYflZ2sP+aZKWjVmydWUNa0Xes5gaUhIURwz5uxdCORrJXVA29twV72glo0XNIcVj4DGxXi4bsMjGrJCh8YLJHs7tbdBhHFQf53Ujvt2hpQ6YJ2SfkknnvW+D2NhIaWkwspJ0MrRdjNfBKjthpsBXY+D+AicFpwZG1Ll6r3UWXtJU4HNwu0m2IzWbqNMNQWnsk1B/mCNIUyRx0wWBRjp289uyGWZV+rL1i+BtaXUjRXhTXdwAAAABJRU5ErkJggg==')
+                                        p.p1 Adult
+                                    .adult-box__content__right
+                                        p Contact Information
+
+                        .fly-review__baggage
+                            .baggage-box
+                                .box-title
+                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='18', height='38', viewBox='0 0 18 38')
+                                        image(width='18', height='38', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAmCAYAAADJJcvsAAAC30lEQVRIS+2WTUhUURTH/+fOGzNx3lT2AeI0b9QKCV0kERS0KJioaCVR4KJtEGQf1rwxiBZibwajFlEg0a5wVURZWFCbysiNRGpJjO9ZFC5KfeZHzZt74k1I6sxAIy4KPNt7zu/+77n3nHsIOYwZZMe1BgJvJkmTkuD1CLQVnzV7soVQLtB3o7xaQj4GsArABICVILqkRgYb8wLZF4P3QVRLRMclsJxY1gB0kqSs8TUN9c2H5VRkG8FugPpU3TziBo23VK6BcEwwH/BFrad5gLTXDAz6dfOQGzQZqyxz2BkARFjVE8/zAXUxwfJHzMNpUHNFwFGcPkiE1SarKz8QMDSj6JtRvl6BfMuEsD9ivlow6LeiVO+/A1rso/UDHFZ162VeOSIg4dPNejdoIhYoTbF4D3j25n39AH9SdeugCxqNByqE9PRCyt1q09CLnIrsmBYFo1khJeikkgEIcuX/IGBYEogYywCsBfBM1c1dYzGtnZh3ECHsi1j9ZLduXI3kz1MgRN1dFFICyVSyhgR15CjohKqbFbYRegDwfgAjIkVVZBuhRoB1ACVpkOOUJRVPDYEe5gC9U3WzahbIdYvSmBG6SuBjM0ELAhHaaNzQrjDQMBvkeL21YL5HwNGp6aJbhQXTpYpHTDrsdAPwqbpZPFsRA9dd0GUGTswFKVvBuCuJwisig09m1mxDGwA4pOqWdw6I6VpWUL454iXQ/OeU8Y6WcpRRcf9RjjKKdkElsjhthG+4RXuewWcAKl54Y6MWGo0HtwgpmgCu+8tWO6Dq5iY7pnWAsS99p5K3p8eazxdKi4oLCx4B2OlJcWlSiGpB3Jmj1aZB44bWyUCYwfV+3bo9Zz4aaQ0FFQfbGJgSgj+mnPTP8cc8xAALYqwDxNfktHhTcuGD7TpkDFq2oQ0T0OPTzT3ZFI3FyzeQlANEXOeLWHdmfLKBbgL0RdUHz2UDpX9c6WlniNP+aMLt4Wn7BTXpRuaCUkqGAAAAAElFTkSuQmCC')
+                                    p Baggage
+                                .baggage-box__content
+                                    .baggage-box__content__top
+                                            p.p1 Traveler 1 (Adult)
+                                            p.p2 Hanoi (HAN) - Bangkok (BKK)
+                                    .baggage-box__content__group
+                                        .baggage-box__content__item
+                                            p.p3 Ha Noi - Bang Kok
+                                            .baggage-item
+                                                .baggage-item__left
+                                                    span 1
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="39" viewBox="0 0 44 39"><g><g><g><g><g><image width="20" height="33" transform="translate(12 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAAkElEQVRIS+3SMQrCQBCF4f+Zg2Q9hIXnsPAAHsBOsE2RTekBvF86wUSwkUwQrMRqJ3az/ftZPkZDW2+t0gY04XmGJHvonutG0gkwT++z7TV26WJwXCD2Tjw15NQizgsF+wi6JcPQTUgYhmGBQJxNAdrXJAzDsEDgH2fTra9gh4Lf/JxozGlvYifx8kQnWGHcZndIfO4wC9V9AAAAAElFTkSuQmCC"/></g></g><g><g><image width="9" height="33" transform="translate(35 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAhCAYAAAALboFLAAAAzElEQVQ4T+3UPWqCURCF4feIpIvBFahglT2kySISG1tJkcIiha4g/oFFCNlAGt2ACi7ELldsTaFWFt4TPrEJCHcBWg0Mz0wxzIy2vcqD7MeIfsE52XlHFoXqcqYnDgDadkp90BuwzxLADbAGBoVW6B3R7r30Yen1BP4Fw/iuFZ6165SHhuY5dOxiakkE/k4i43kSAZMruo7g4rdAMEsfgpimEQyTSPK9Nt3yl8zLuV+Q/YHbdhhp063U5diQtIqQk5WH+HOwPovtELLiP3czrsPGlXOhAAAAAElFTkSuQmCC"/></g></g><g><g><image width="10" height="33" transform="translate(0 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAhCAYAAADgWTpIAAAA2UlEQVQ4T+2UMU4CYRCFv7cSI9LQUbpYGEsLKalsaDkBXkJvoLhYmlULE49hYs0NvACdGhrc2AH/I2uUbFS0JtmpJjNfpniZ90ShsvN4X5GPgrVJpKnsbcQ4ED3pi5sku4eRwxXQAhs0A7aAEeb2A3zrxx2Jh+L1Qv8qKVU2aLYJvgP2VoDPklNlyc4A62QFlI8/wYv4HjguwW8KlPKUT/HDFGv1FKdA8q+v38+ajbDhG6D7Z6Tky5fLRq06rw4FB7/AY5vrZezlQJbEPZuOcEXS1KZuGEk8LgC1Kr6GOY7ykQAAAABJRU5ErkJggg=="/></g></g></g><g><g><image width="15" height="6" transform="translate(15)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAGCAYAAAAc2cSCAAAA30lEQVQoU4WOsUoDURBFz40EVHTTiKBNHvEbJI21jVVAbcUPsDZ2iyhutLARbNMq5BNCvkKwM7Gwz9MoaPaN7DNBUmWay9x7DzNiMj6r7ZiFbcmWMOVTP6pQIYa9JrXBgw6JeTRHl9WNfEEXYLugFbDxDIxiD+lZIdyung06cX2/2Vq3fPwEWpsAP0B5FiYApaln0knl9OVO/sq1EUeI1sfX9/lm+vZp6X8xXkgJZshfu3rJ6BosIxrymbOikDT7f6/NGZ+5R+AA1NGw5e5lLCbN/vE8sMiHWXVPaN9Q7xfxfkgxtKNSMQAAAABJRU5ErkJggg=="/></g></g></g></g></svg>
+                                                .baggage-item__right
+                                                    p CARRY-ON BAG, 1 INCLUDED
+                                                    span Carry10kg 22lbupto 45li 115lcm
+                                                    span Most Significant Carrier is FI (Icelandair)‎
+                                        .baggage-box__content__item
+                                            p.p3 Ha Noi - Bang Kok
+                                            .baggage-item
+                                                .baggage-item__left
+                                                    span 1
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="39" viewBox="0 0 44 39"><g><g><g><g><g><image width="20" height="33" transform="translate(12 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAAkElEQVRIS+3SMQrCQBCF4f+Zg2Q9hIXnsPAAHsBOsE2RTekBvF86wUSwkUwQrMRqJ3az/ftZPkZDW2+t0gY04XmGJHvonutG0gkwT++z7TV26WJwXCD2Tjw15NQizgsF+wi6JcPQTUgYhmGBQJxNAdrXJAzDsEDgH2fTra9gh4Lf/JxozGlvYifx8kQnWGHcZndIfO4wC9V9AAAAAElFTkSuQmCC"/></g></g><g><g><image width="9" height="33" transform="translate(35 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAhCAYAAAALboFLAAAAzElEQVQ4T+3UPWqCURCF4feIpIvBFahglT2kySISG1tJkcIiha4g/oFFCNlAGt2ACi7ELldsTaFWFt4TPrEJCHcBWg0Mz0wxzIy2vcqD7MeIfsE52XlHFoXqcqYnDgDadkp90BuwzxLADbAGBoVW6B3R7r30Yen1BP4Fw/iuFZ6165SHhuY5dOxiakkE/k4i43kSAZMruo7g4rdAMEsfgpimEQyTSPK9Nt3yl8zLuV+Q/YHbdhhp063U5diQtIqQk5WH+HOwPovtELLiP3czrsPGlXOhAAAAAElFTkSuQmCC"/></g></g><g><g><image width="10" height="33" transform="translate(0 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAhCAYAAADgWTpIAAAA2UlEQVQ4T+2UMU4CYRCFv7cSI9LQUbpYGEsLKalsaDkBXkJvoLhYmlULE49hYs0NvACdGhrc2AH/I2uUbFS0JtmpJjNfpniZ90ShsvN4X5GPgrVJpKnsbcQ4ED3pi5sku4eRwxXQAhs0A7aAEeb2A3zrxx2Jh+L1Qv8qKVU2aLYJvgP2VoDPklNlyc4A62QFlI8/wYv4HjguwW8KlPKUT/HDFGv1FKdA8q+v38+ajbDhG6D7Z6Tky5fLRq06rw4FB7/AY5vrZezlQJbEPZuOcEXS1KZuGEk8LgC1Kr6GOY7ykQAAAABJRU5ErkJggg=="/></g></g></g><g><g><image width="15" height="6" transform="translate(15)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAGCAYAAAAc2cSCAAAA30lEQVQoU4WOsUoDURBFz40EVHTTiKBNHvEbJI21jVVAbcUPsDZ2iyhutLARbNMq5BNCvkKwM7Gwz9MoaPaN7DNBUmWay9x7DzNiMj6r7ZiFbcmWMOVTP6pQIYa9JrXBgw6JeTRHl9WNfEEXYLugFbDxDIxiD+lZIdyung06cX2/2Vq3fPwEWpsAP0B5FiYApaln0knl9OVO/sq1EUeI1sfX9/lm+vZp6X8xXkgJZshfu3rJ6BosIxrymbOikDT7f6/NGZ+5R+AA1NGw5e5lLCbN/vE8sMiHWXVPaN9Q7xfxfkgxtKNSMQAAAABJRU5ErkJggg=="/></g></g></g></g></svg>
+                                                .baggage-item__right
+                                                    p CARRY-ON BAG, 1 INCLUDED
+                                                    span Carry10kg 22lbupto 45li 115lcm
+                                                    span Most Significant Carrier is FI (Icelandair)‎
+
+
+                                    .baggage-box__attention
+                                            p.bold Baggage allowance and charges are applied for the whole trip.
+                                            span Baggage allowance and fees are provided for information only.
+                                            span Additional allowance may apply depending on the traveler's individual passenger status  (e.g. Saga Club membership)
+
+
+                        .fly-checkout__btn
+                            a.btn.btn-orange.btn-round Continue
+            #flightDetail.modal.fade
+                .modal-dialog
+                    .modal-content
+                        .modal-body
+                            button.close(type='button', data-dismiss='modal') ×
+                            .detail-box
+                                .detail-box__title
+                                    h5 Flight Details
+                                .detail-box__name
+                                    p Departure: Hanoi - Bangkok
+                                .detail-box__item
+                                    .detail-box__airline
+                                        img(src='images/offers-logo.png')
+                                        p
+                                            | Vietnam Airlines
+                                            span VN 123
+                                    .detail-box__trip
+                                        .trip-box
+                                            .trip-box__start
+                                                p Hanoi, Vietnam
+                                                p Nov 10, 08:00 PM
+                                                p Hanoi (HAN) Vietnam
+                                            .trip-box__line
+                                                p.p1 03h 50m
+                                                .straight-line
+                                                p.p2 980 miles
+                                            .trip-box__end
+                                                p Bangkok, Thailand
+                                                p Nov 10, 08:00 PM
+                                                p Bangkok (BKK) Thailand
+                                .detail-box__time
+                                    p Layover: LHR London. Time: 20h50m
+                                .detail-box__item
+                                    .detail-box__airline
+                                        img(src='images/offers-logo.png')
+                                        p
+                                            | Vietnam Airlines
+                                            span VN 123
+                                    .detail-box__trip
+                                        .trip-box
+                                            .trip-box__start
+                                                p Hanoi, Vietnam
+                                                p Nov 10, 08:00 PM
+                                                p Hanoi (HAN) Vietnam
+                                            .trip-box__line
+                                                p.p1 03h 50m
+                                                .straight-line
+                                                p.p2 980 miles
+                                            .trip-box__end
+                                                p Bangkok, Thailand
+                                                p Nov 10, 08:00 PM
+                                                p Bangkok (BKK) Thailand
+        include jades/footer.jade
+        script(type='text/javascript' src="js/jquery-3.3.1.min.js")
+        script(type='text/javascript' src="js/popper.min.js")
+        script(type='text/javascript' src="js/bootstrap.min.js")
+        script(type='text/javascript' src="js/slick.min.js")
+
+
+
+

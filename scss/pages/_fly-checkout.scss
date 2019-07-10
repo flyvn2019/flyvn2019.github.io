@@ -1,0 +1,170 @@
+.form-checkout{
+  margin-bottom: 30px;
+  @include breakpoint(sm){
+    box-shadow: $shadow;
+  }
+  &__group{
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    @include breakpoint(sm){
+      padding: 15px;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  &__title{
+    margin-bottom: 15px;
+    h5{
+      font-size: 16px;
+      font-weight: 600;
+      color: $orange;
+    }
+    p{
+      font-size: 12px;
+      color: #000;
+      font-weight: 600;
+    }
+    &.add-freq{
+      h5{
+        display: inline-block;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
+        i{
+          margin-left: 5px;
+          transition: .5s;
+        }
+      }
+    }
+  }
+  &__row{
+    @include breakpoint(sm){
+      display: flex;
+      margin: 0 -5px;
+    }
+    &.row-info{
+      margin-bottom: 30px;
+      .form-group{
+        &_title{
+          width: 100px;
+        }
+        &_first,
+        &_last,
+        &_pass{
+          @include breakpoint(sm){
+            width: calc((100% - 100px)/3);
+          }
+        }
+      }
+    }
+    &.row-date{
+      .form-group{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        label{
+          display: block;
+          width: 100%;
+        }
+        .form-control{
+          width: calc((100% - 20px) / 3);
+        }
+      }
+    }
+    &.row-gender{
+      .form-group{
+        display: flex;
+        align-items: center;
+        > label{
+          margin: 0 20px 0 0;
+        }
+        .radio{
+          padding: 0 10px;
+          label{
+            margin: 0;
+          }
+        }
+      }
+    }
+    &.row-card{
+      flex-wrap: wrap;
+      display: none;
+      margin: 0;
+      @include breakpoint(sm){
+        width: 400px;
+      }
+      .form-group{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        .form-control{
+          width: calc((100% - 10px)/2);
+        }
+      }
+    }
+    &.row-contact{
+      .form-group{
+        @include breakpoint(sm){
+          width: 33.333%;
+        }
+      }
+    }
+    &.row-textarea{
+      .form-group{
+        width: 100%;
+        textarea{
+          resize: none;
+          height: 60px;
+        }
+      }
+    }
+  }
+  &__freq{
+    &.rotate{
+      .add-freq{
+        h5{
+          i{
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  &__text{
+    margin-bottom: 15px;
+    p{
+      font-size: 14px;
+      color: #000;
+    }
+  }
+  .form-group{
+    @include breakpoint(sm){
+      padding: 0 5px;
+    }
+    > label{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+    }
+  }
+}
+
+.fly-checkout{
+  &__form{
+    margin-bottom: 30px;
+  }
+  &__btn{
+    text-align: center;
+    @include breakpoint(sm){
+      text-align: right;
+    }
+    .btn{
+      font-size: 18px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+    }
+  }
+}

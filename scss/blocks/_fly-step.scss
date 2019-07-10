@@ -1,0 +1,47 @@
+.step-box{
+  display: flex;
+  &__item{
+    @include breakpoint(sm){
+      margin-right: 50px;
+      padding-bottom: 2px;
+    }
+    p{
+      color: #231f20;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    &.active{
+      @include breakpoint(sm){
+        border-bottom: 3px solid $orange;
+      }
+    }
+  }
+}
+.edit-search{
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+  i{
+    color: #44262c;
+  }
+  span{
+    font-size: 15px;
+    color: #231f20;
+    padding-left: 5px;
+  }
+}
+.fly-step{
+  background-color: #e7e8e9;
+  padding: 10px 0;
+  @include breakpoint(sm){
+    padding: 20px 0;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left{}
+  &__right{}
+}

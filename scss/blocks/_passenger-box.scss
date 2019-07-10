@@ -1,0 +1,77 @@
+.passenger-box{
+  position: absolute;
+  left:50%;
+  top: 100%;
+  z-index: 10;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+  background-color:$brown;
+  padding: 15px 10px;
+  border-radius:6px;
+  @include breakpoint(sm){
+    width: 300px;
+  }
+  @include breakpoint(only-sm){
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-1;
+    padding: 10px 15px;
+    border-radius:30px ;
+    margin-bottom: 10px;
+    .p-left{
+      font-size: 10px;
+      color: $black-1;
+      span{
+        color: $orange;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .p-right{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        display: block;
+      }
+      .numb{
+        font-size: 14px;
+        font-weight:600;
+        color: $orange;
+        padding: 0 10px;
+      }
+      .minus {
+        border-radius: 50%;
+        background-color: #ddd;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        i{
+          font-size: 12px;
+          color: #000;
+        }
+      }
+      .plus {
+        border-radius: 50%;
+        background-color: #e4e4e4;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        i{
+          font-size: 12px;
+          color: #000;
+        }
+      }
+    }
+  }
+}

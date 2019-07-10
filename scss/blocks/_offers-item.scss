@@ -1,0 +1,103 @@
+.offers-item{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 60px;
+  margin-bottom: 15px;
+  padding: 5px 20px 5px 5px;
+  width: 100%;
+  position: relative;
+  @include breakpoint(sm){
+    padding: 10px 40px 10px 10px;
+  }
+  &__left {
+    width: 45px;
+    @include breakpoint(sm){
+      width: 100px;
+    }
+  }
+  &__right {
+    width: calc(100% - 45px);
+    padding-left: 10px;
+    @include breakpoint(sm){
+      width: calc(100% - 100px);
+      padding-left: 20px;
+    }
+  }
+  &__img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include breakpoint(sm){
+      width: 100px;
+      height: 100px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+    }
+  }
+  &__text {
+    padding-left: 10px;
+    border-left: 1px solid $brown;
+    @include breakpoint(sm){
+      padding-left: 20px;
+    }
+    .p1{
+      font-size:12px;
+      font-weight: 700;
+      color: #000;
+      @include breakpoint(sm){
+        font-size: 14px;
+      }
+    }
+    .p2{
+      font-style: italic;
+      font-size: 10px;
+      @include breakpoint(sm){
+        font-size: 12px;
+      }
+    }
+  }
+  &__detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(md){
+      margin-top: 10px;
+    }
+    p{
+      font-size: 10px;
+      @include breakpoint(sm){
+        font-size: 12px;
+      }
+    }
+    .date {
+      color: #848484;
+    }
+    .price {
+      color: $orange;
+      font-weight: $bold;
+    }
+    img{
+      @include breakpoint(xs){
+        width: 20px;
+      }
+    }
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 60px;
+    &:hover,&:focus{
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.icon-box{
+  p{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    i{
+      color: $orange;
+    }
+    span,i{
+      vertical-align: middle;
+    }
+    span{
+      padding-right: 10px;
+    }
+  }
+}

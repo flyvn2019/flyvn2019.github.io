@@ -1,0 +1,915 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        header.fly-header.fly-header_home
+            .container
+                nav.navbar.navbar-expand-md
+                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+                        i.fas.fa-align-left
+                    a.navbar-brand(href='index.html')
+                        img(src="images/logo.svg")
+                    #collapsibleNavbar.collapse.navbar-collapse
+                        ul.navbar-nav
+                            li.nav-item.active
+                                a.nav-link(href='index.html') Home
+                            li.nav-item
+                                a.nav-link(href='#') Book your trip
+                            li.nav-item
+                                a.nav-link(href='#') Flight Info
+                            li.nav-item
+                                a.nav-link(href='#') Before your fly
+                    .fly-header__right
+                        .fly-header__language
+                            img(src="images/lag-eng.png")
+                            i.fas.fa-caret-right
+                        .fly-header__search
+                            i.fas.fa-search
+                            input(type='text')
+                            i.far.fa-times-circle
+        main.wrapper
+            section.fly-home
+                .fly-home__banner(style='background-image: url(../images/bg.png);')
+                    .fly-home__search
+                        .container
+                            .home-search
+                                .home-search__header
+                                    .home-search__title
+                                        h5 Book your flight
+                                    .home-search__choose
+                                        .home-search__radio
+                                            .radio
+                                                input(type='radio' id='r1' name='radio' checked='checked')
+                                                label(for='r1') Round Trip
+                                        .home-search__radio
+                                            .radio
+                                                input(type='radio' id='r2' name='radio')
+                                                label(for='r2') One Way
+                                        .home-search__radio
+                                            .radio
+                                                input(type='radio' id='r3' name='radio')
+                                                label(for='r3') Multi Destination
+                                .home-search__content.no-multi
+                                    .home-search__group
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 VIETNAM
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+
+
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 bangkok
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input.flatpickr(type='text' placeholder='Select Date..')
+                                            .home-search__input.home-search__return
+                                                label Return
+                                                input.flatpickr(type='text' placeholder='Select Date..')
+                                    .home-search__passenger
+                                        .home-search__input
+                                            label Passenger
+                                            input(type='text', value='2 Adults, 1 Child, 1 Infant')
+                                            ul.passenger-box.d-none
+                                                li
+                                                    p.p-left
+                                                        span Aldult &nbsp;|&nbsp;
+                                                        | 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Child &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Infant &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                .home-search__content.multi.d-none
+                                    .home-search__group
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 VIETNAM
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+
+
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 bangkok
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+
+
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input.flatpickr(type='text' placeholder='Select Date..')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                                                    C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                                                    c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                                                    c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                                                    l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                                                    C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                                                    c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                                                    c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                                                    l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                                                    C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                                                    c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                                                    c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                                                    l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-fly.svg")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                                                    C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                                                    c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                                                    c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                                                    l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__passenger
+                                        .home-search__input
+                                            label Passenger
+                                            input(type='text', value='2 Adults, 1 Child, 1 Infant')
+                                            ul.passenger-box.d-none
+                                                li
+                                                    p.p-left
+                                                        span Aldult &nbsp;|&nbsp;
+                                                        | 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Child &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Infant &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                .home-search__btn
+                                    a.btn.btn-orange(href="#") Add Flight
+                                    a.btn.btn-orange(href="fly-list.html") Search Flight
+
+                .fly-home__destination
+                    .container
+                        .destination
+                            .destination__title
+                                p explorational stories
+                                span news and updates
+                            .destination__body
+                                .destination__col
+                                    .destination-item
+                                        .destination-item__photo
+                                            img(src="images/destination-bg-1.png")
+                                            .destination-item__btn
+                                                a.btn.btn-orange.btn-round Destination 1
+                                        .destination-item__content
+                                            .destination-item__text
+                                                p.p1 Designed to capture the real essence of VietNam
+                                                p.p2 Vietnam Discovery tours bring you a fascintating introduction to the of Southeast Aria's most
+                                            .destination-item__link
+                                                a(href="")
+                                                    | Read More
+                                                    i.fas.fa-long-arrow-alt-right
+
+                                .destination__col
+                                    .destination-item
+                                        .destination-item__photo
+                                            img(src="images/destination-bg-1.png")
+                                            .destination-item__btn
+                                                a.btn.btn-orange.btn-round Destination 1
+                                        .destination-item__content
+                                            .destination-item__text
+                                                p.p1 Designed to capture the real essence of VietNam
+                                                p.p2 Vietnam Discovery tours bring you a fascintating introduction to the of Southeast Aria's most
+                                            .destination-item__link
+                                                a(href="")
+                                                    | Read More
+                                                    i.fas.fa-long-arrow-alt-right
+
+                                .destination__col
+                                    .destination-item
+                                        .destination-item__photo
+                                            img(src="images/destination-bg-1.png")
+                                            .destination-item__btn
+                                                a.btn.btn-orange.btn-round Destination 1
+                                        .destination-item__content
+                                            .destination-item__text
+                                                p.p1 Designed to capture the real essence of VietNam
+                                                p.p2 Vietnam Discovery tours bring you a fascintating introduction to the of Southeast Aria's most
+                                            .destination-item__link
+                                                a(href="")
+                                                    | Read More
+                                                    i.fas.fa-long-arrow-alt-right
+
+                                .destination__col
+                                    .destination-item
+                                        .destination-item__photo
+                                            img(src="images/destination-bg-1.png")
+                                            .destination-item__btn
+                                                a.btn.btn-orange.btn-round Destination 1
+                                        .destination-item__content
+                                            .destination-item__text
+                                                p.p1 Designed to capture the real essence of VietNam
+                                                p.p2 Vietnam Discovery tours bring you a fascintating introduction to the of Southeast Aria's most
+                                            .destination-item__link
+                                                a(href="")
+                                                    | Read More
+                                                    i.fas.fa-long-arrow-alt-right
+
+                                .destination__col
+                                    .destination-item
+                                        .destination-item__photo
+                                            img(src="images/destination-bg-1.png")
+                                            .destination-item__btn
+                                                a.btn.btn-orange.btn-round Destination 1
+                                        .destination-item__content
+                                            .destination-item__text
+                                                p.p1 Designed to capture the real essence of VietNam
+                                                p.p2 Vietnam Discovery tours bring you a fascintating introduction to the of Southeast Aria's most
+                                            .destination-item__link
+                                                a(href="")
+                                                    | Read More
+                                                    i.fas.fa-long-arrow-alt-right
+
+                .fly-home__sale(style='background-image: url(../images/sale-bg.png);')
+                    .fly-home__sale__backdrop
+                    .container
+                        .fly-home__sale__content
+                            p.p1 INDONESIA DISCOVERY AMAZING
+                            p.p2 40% OFF
+                            .fly-home__sale__text
+                                p For Vietjet air and Jetstar Pacific, please book within 24 hours.
+                                p Before departure, please contact 1900 69 69 69
+                                p Phone support: 1900 68 68 68
+                            .fly-home__sale__btn
+                                a.btn.btn-outline(href="") Book Now
+
+                .fly-home__offers
+                    .container
+                        .fly-offers
+                            .fly-offers__title
+                                h5 VIEW LATEST OFFERS DEPARTING  FROM INDONESIA
+                            .fly-offers__slide
+                                .fly-offers__row
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                .fly-offers__row
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                .fly-offers__row
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                .fly-offers__row
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+                                    .fly-offers__col
+                                        .offers-item
+                                            .offers-item__left
+                                                .offers-item__img
+                                                    img(src="images/sale-bg.png")
+                                            .offers-item__right
+                                                .offers-item__text
+                                                    p.p1 Manila (MNL) - Bangkok (BKK)
+                                                    p.p2 Economy Saver
+                                                    .offers-item__detail
+                                                        p.date Round Trip
+                                                        img(src="images/offers-logo.png")
+                                                        p.price Price $ 199,00
+
+                                            a.offers-item__link(href='#')
+        include jades/footer.jade
+        script(type='text/javascript' src="js/jquery-3.3.1.min.js")
+        script(type='text/javascript' src="js/popper.min.js")
+        script(type='text/javascript' src="js/bootstrap.min.js")
+        script(type='text/javascript' src="js/slick.min.js")
+        script(type='text/javascript' src="js/flatpickr.js")
+
+        script.
+            $('.home-search__go input').click(function () {
+                $(this).parents('.home-search__go').children('.search-default').toggleClass('d-none');
+                $('.home-search__to .search-default').addClass('d-none');
+            });
+            $('.home-search__to input').click(function () {
+                $(this).parents('.home-search__to').children('.search-default').toggleClass('d-none');
+                $('.home-search__go .search-default').addClass('d-none');
+            });
+            $('.home-search__passenger input').click(function () {
+                $('.passenger-box').toggleClass('d-none');
+            });
+        script.
+            $('#r1').click(function () {
+                $('.no-multi .home-search__return').removeClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#r2').click(function () {
+                $('.no-multi .home-search__return').addClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#r3').click(function () {
+                $('.multi').removeClass('d-none');
+                $('.no-multi').addClass('d-none');
+
+            });
+        script.
+            $('.home-search__depart input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+            $('.home-search__return input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+        script.
+            $(".destination__body").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                autoplaySpeed: 5000,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        script.
+            $('.fly-offers__slide').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                arrows: false,
+                dots: true
+            });
+
+
+
+
+
+
+
+
+
