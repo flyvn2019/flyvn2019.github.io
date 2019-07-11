@@ -8,27 +8,113 @@ html(lang="vi")
             .container
                 nav.navbar.navbar-expand-md
                     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
-                        i.fas.fa-align-left
+                        i.fas.fa-bars
                     a.navbar-brand(href='index.html')
-                        img(src="images/logo.svg")
+                        img(src='images/logo.png')
                     #collapsibleNavbar.collapse.navbar-collapse
+                        ul.navbar-social
+                            li
+                                a(href='#')
+                                    i.fab.fa-facebook-f
+                            li
+                                a(href='#')
+                                    i.fab.fa-youtube
+                            li
+                                a(href='#')
+                                    i.fab.fa-google-plus-g
                         ul.navbar-nav
                             li.nav-item.active
                                 a.nav-link(href='index.html') Home
                             li.nav-item
-                                a.nav-link(href='#') Book your trip
+                                a.nav-link(href='#') Plan & Book
+                                    i.fas.fa-chevron-down
+                                .nav-sub
+                                    .nav-sub__content
+                                        ul
+                                            li.li-title Book Your Trip
+                                            li
+                                                a(href='#') Domestic Flights
+
+                                            li
+                                                a(href='#') International Flights
+                                            li
+                                                a(href='#') Fare Types & Rules
+                                        ul
+                                            li.li-title Fly Experience
+                                            li
+                                                a(href='#') 4 Star Airline Services
+
+                                            li
+                                                a(href='#') Business Class
+                                            li
+                                                a(href='#') Premium Economy Class
+                                            li
+                                                a(href='#') Economy Class
+                                            li
+                                                a(href='#') Food & Beverages
+                                            li
+                                                a(href='#') In-flight Entertainment
+                                        ul
+                                            li.li-title The Fleet
+                                            li
+                                                a(href='#') Boeing 787
+                                            li
+                                                a(href='#') Airbus A350
+                                            li
+                                                a(href='#') Airbus A330
+                                            li
+                                                a(href='#') Airbus A321
+                                        ul
+                                            li.li-title Flight Info
+                                            li
+                                                a(href='#') Route Map
+                                            li
+                                                a(href='#') Flight Schedule
+                                            li
+                                                a(href='#') Flight Status
                             li.nav-item
-                                a.nav-link(href='#') Flight Info
+                                a.nav-link(href='#') Travel Info
+                                    i.fas.fa-chevron-down
+                                .nav-sub
+                                    .nav-sub__content
+                                        ul
+                                            li.li-title Baggage
+                                            li
+                                                a(href='#') Cabin/ Hand Baggage
+
+                                            li
+                                                a(href='#') Checked Baggage
+                                            li
+                                                a(href='#') Excess Baggage
+                                            li
+                                                a(href='#') Retricsted Baggage
+                                            li
+                                                a(href='#') Mishadle Baggage
+                                            li
+                                                a(href='#') Special Baggage
+                                        ul
+                                            li.li-title Travel infomation
+                                            li
+                                                a(href='#') Airpost Guide
+                                            li
+                                                a(href='#') Payment Guide
+                                        ul
+                                            li.li-title Extra Service
+                                            li
+                                                a(href='#') Repaid / Extra Baggage
+                                            li
+                                                a(href='#') Airpost Transfer Service
+                                        ul
+                                            li.li-title Special Service
+                                            li
+                                                a(href='#') Unaccompanied Children
+                                            li
+                                                a(href='#') Passenger with Disabilities
+                                            li
+                                                a(href='#') Pregnant Passenger
                             li.nav-item
-                                a.nav-link(href='#') Before your fly
-                    .fly-header__right
-                        .fly-header__language
-                            img(src="images/lag-eng.png")
-                            i.fas.fa-caret-right
-                        .fly-header__search
-                            i.fas.fa-search
-                            input(type='text')
-                            i.far.fa-times-circle
+                                a.nav-link(href='#') Contact Us
+
         main.wrapper
             section.fly-home
                 .fly-home__banner(style='background-image: url(../images/bg.png);')
@@ -903,6 +989,17 @@ html(lang="vi")
                 speed: 500,
                 arrows: false,
                 dots: true
+            });
+        script.
+            $('.nav-link').click(function () {
+
+                $(this).next('.nav-sub').slideToggle(400);
+                $('.nav-item.active .nav-sub').slideUp(400);
+
+                $(this).parent('.nav-item').toggleClass('active');
+                $(this).parent('.nav-item').siblings().removeClass('active');
+
+
             });
 
 

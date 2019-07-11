@@ -1,10 +1,4 @@
 .fly-home {
-  @include breakpoint(sm){
-    margin-top: -62px;
-  }
-  @include breakpoint(md){
-    margin-top: -75px;
-  }
   &__banner{
     width: 100%;
     background-repeat: no-repeat;
