@@ -4,7 +4,7 @@
   border: none;
   border-radius: 6px;
 }
-.btn-purple{
+.btn-blue{
   background-color: $main-color;
   color: $white-1!important;
   &:hover{
@@ -12,7 +12,7 @@
     background-color:$main-color;
   }
   &:active, &:focus{
-    box-shadow: 0 0 0 0.2rem rgba(106, 40, 250, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(6, 48, 89, 0.5);
   }
 }
 .btn-orange{
@@ -37,6 +37,7 @@
     box-shadow: 0 0 0 0.2rem rgba(68, 38, 44, 0.5);
   }
 }
+
 .btn-disable{
   pointer-events:none;
   opacity: .5;

@@ -1,256 +1,238 @@
 .home-search {
+  animation: opacityShow 0.5s;
+  @include breakpoint(xs){
+    margin: 0 -15px;
+  }
   @include breakpoint(sm){
-    background-color: rgba(248,248,255,.89);
-    padding: 15px 10px;
+    padding: 30px 0 0;
+  }
+  @include breakpoint(md){
+    padding: 30px 50px 0;
   }
   &__header {
-    margin-bottom: 15px;
-    @include breakpoint(sm){
-      display: flex;
-      align-items: center;
-    }
-  }
-  &__title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    @include breakpoint(sm) {
-      width: auto;
-      text-align: left;
-      margin-right:20px;
-      margin-bottom: 0;
-    }
-    h5 {
-      text-transform: uppercase;
-      font-size: 20px;
-      font-weight: 600;
-      color: #5a4043;
-    }
-  }
-  &__choose {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    @include breakpoint(sm) {
-      width: auto;
-    }
-  }
-  &__radio {
-    margin-right: 10px;
-    @include breakpoint(sm){
-      margin-right: 20px;
-    }
-    &:last-child{
-      margin-right: 0;
-    }
-    .radio{
-      label{
-        font-size: 12px;
-        padding-left: 25px;
-      }
-      input[type=radio]+label:before{
-        width: 18px;
-        height: 18px;
-        line-height: 18px;
-      }
-    }
-  }
-  &__content {
+    background-color: $main-color;
+    padding: 15px;
     @include breakpoint(sm){
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0 -5px 10px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      padding: 0 15px;
     }
-    &.multi{
+  }
+  &__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include breakpoint(sm){
+      width: 60%;
+      padding: 15px 30px;
+      border-right: 2px dashed #999;
+    }
+    h5 {
+      text-transform: uppercase;
+      color: #d7c46f;
+      font-size: 14px;
+      font-weight: 600;
+      padding-left: 10px;
+    }
+  }
+  &__content{
+    background-color: #fff;
+    padding: 15px;
+    @include breakpoint(sm){
+      display: flex;
+      justify-content: space-between;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      padding: 0 15px;
+    }
+  }
+  &__left{
+    @include breakpoint(sm){
+      width: 60%;
+      padding: 15px 10px;
+      border-right: 2px dashed #999;
+    }
+    @include breakpoint(md){
+      padding: 15px 30px;
+    }
+  }
+  &__tab{
+    display: flex;
+    margin-bottom: 15px;
+    @include breakpoint(xs){
+      justify-content: center;
+    }
+    li{
+      padding: 0 5px;
+      @include breakpoint(xs){
+        padding: 0 1px;
+      }
+      button{
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 12px;
+        color: $main-color;
+        padding: 5px;
+        border-radius: 6px;
+        font-weight: 600;
+        @include breakpoint(sm){
+          font-size: 14px;
+          padding: 5px 10px;
+        }
+        &:focus{
+          outline: none;
+        }
+        &:hover{
+          background-image: linear-gradient(to right,#ddcf77,#d0b966);
+        }
+      }
+      &.active{
+        button{
+          background-image: linear-gradient(to right,#ddcf77,#d0b966);
+          color: #000;
+        }
+      }
+    }
+  }
+  &__item{
+    @include breakpoint(sm){
+      display: flex;
       flex-wrap: wrap;
-      .home-search__group{
+      margin:  0 -10px;
+      .form-group{
         @include breakpoint(sm){
-          width: 100%;
-          margin-bottom: 10px;
-          &:first-child {
-            width: calc(100% - 20px);
-          }
-        }
-      }
-      .home-search__trip{
-        @include breakpoint(sm){
-          width: 75%;
-        }
-      }
-      .home-search__date{
-        @include breakpoint(sm){
-          width: 25%;
-          padding-right: 0;
-        }
-      }
-      .home-search__depart{
-        @include breakpoint(sm){
-          width: 100%;
+          width: 50%;
+          padding: 0 10px;
         }
       }
     }
   }
   &__group{
-    width: 100%;
-    margin-bottom: 10px;
-    @include breakpoint(sm){
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 75%;
-      margin: 0;
-    }
-    &.active{
+    animation: opacityShow 0.5s;
+    &.multi{
       position: relative;
-      padding: 10px;
-      @include breakpoint(xs){
-        background-color: rgba(255, 255, 255, 0.5);
+      .home-search__item{
+        @include breakpoint(lg){
+          flex-wrap: nowrap;
+          margin: 0 -5px;
+          .form-group{
+            width: auto;
+            padding: 0 5px;
+          }
+        }
       }
-      @include breakpoint(sm){
-        padding: 10px 0;
-      }
-      .home-search__input{
-        label{
-          display: none;
+      .search-default{
+        @include breakpoint(lg){
+          left: 5px;
+          width: calc(100% - 10px);
         }
       }
     }
   }
-  &__close{
-    cursor: pointer;
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    @include breakpoint(sm) {
-      position: initial;
+  &__add{
+    @include breakpoint(xs){
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
-    svg{
-      width: 20px;
-      fill: #a7a9ac;
-      @include breakpoint(sm) {
-        vertical-align: middle;
+  }
+  &__right{
+    @include breakpoint(sm){
+      width: 40%;
+      padding: 15px 10px;
+    }
+    @include breakpoint(md){
+      padding: 15px 30px;
+    }
+    .p1{
+      font-size: 14px;
+      color: #000;
+      font-weight: 600;
+      margin-bottom: 10px;
+      @include breakpoint(sm){
+        padding: 5px 0;
+        margin-bottom: 15px;
+        color: $main-color;
       }
     }
   }
-  &__input {
-    label {
-      display: block;
-      margin-bottom:5px;
+  &__travellers{
+    @include breakpoint(sm){
+      display: flex;
+      flex-wrap: wrap;
+      margin:  0 -5px;
+    }
+    .form-group{
+      @include breakpoint(sm){
+        padding: 0 5px;
+      }
+    }
+    .p2{
       font-size: 14px;
-      font-weight: 600;
-      padding-left: 10px;
-      color:$brown;
+      color:#a9a9a9;
+      margin-top: 5px;
     }
-    input {
-      border: 1px solid #8b8b8b;
-      border-radius: 15px;
-      padding: 5px 10px;
-      width: 100%;
-      background: transparent;
-      font-size: 12px;
-      &:focus {
-        outline: none;
-      }
-      &::-webkit-input-placeholder {
-        color:#666;
-      }
-      &::-moz-placeholder {
-        color:#666;
-      }
-      &:-ms-input-placeholder {
-        color:#666;
-      }
-      &:-moz-placeholder {
-        color:#666;
-      }
+  }
+  &__btn{
+    @include breakpoint(xs){
+      text-align: center;
     }
-    input[value]{
+    @include breakpoint(sm){
+      text-align: right;
+    }
+  }
+  .form-group{
+    position: relative;
+    margin-bottom: 10px;
+    i{
+      position: absolute;
+      bottom: 10px;
+      right: 22px;
       color: #666;
     }
-  }
-  &__trip{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-    position: relative;
-    @include breakpoint(sm){
-      width: 50%;
-      margin: 0;
-      padding: 0 5px;
+    &_adults{
+      @include breakpoint(sm){
+        width: 65%;
+      }
     }
-  }
-  &__go {
-    padding-right:5px;
-    width: calc((100% - 24px)/2);
-    @include breakpoint(sm){
-      position: relative;
+    &_child{
+      @include breakpoint(sm){
+        width: 35%;
+      }
     }
-  }
-  &__to {
-    padding-left:5px;
-    width: calc((100% - 24px)/2);
-    @include breakpoint(sm){
-      position: relative;
+    &_infants{
+      @include breakpoint(sm){
+        width: 100%;
+        margin-top: -25px;
+      }
     }
-  }
-  &__img{
-    width: 24px;
-    transform: translateY(-3px);
-  }
-  &__date {
-    width: 100%;
-    @include breakpoint(sm){
-      width: 50%;
-      margin: 0;
-      padding: 0 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-  &__depart {
-    margin-bottom: 10px;
-    @include breakpoint(sm){
-      width: 50%;
-      padding-right: 5px;
-      margin: 0;
-    }
-  }
-  &__return {
-    @include breakpoint(sm){
-      width: 50%;
-      padding-left: 5px;
+    &_close{
+      @include breakpoint(sm){
+        display: flex;
+        align-items: flex-end;
+      }
+      .btn{
+        font-size: 17px;
+        font-weight: 600;
+      }
     }
     &.d-hidden{
       pointer-events: none;
       opacity: .4;
     }
   }
-  &__passenger {
-    width: 100%;
-    margin-bottom: 10px;
-    position: relative;
-    @include breakpoint(sm){
-      width:25%;
-      margin: 0;
-      padding: 0 5px;
-    }
+  select.form-control{
+    cursor: pointer;
   }
-  &__btn {
-    text-align: center;
-    margin-top: 30px;
-    @include breakpoint(sm){
-      text-align: right;
-    }
-    .btn{
-      font-size: 18px;
-      margin: 0 5px;
-      &:hover {
-        background-color: $brown;
-      }
-    }
+  .form-control{
+    border-radius: 0;
+    border-top: 4px solid $main-color;
+  }
+  .form-control:disabled, .form-control[readonly]{
+    background-color: #fff;
   }
 }

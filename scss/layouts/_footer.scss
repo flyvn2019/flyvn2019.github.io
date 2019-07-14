@@ -1,181 +1,43 @@
 .fly-footer {
-  border-top: 1px solid #ddd;
-  &__group {
-    @include breakpoint(sm) {
-      display: flex;
-      justify-content: space-between;
-      padding:30px 0;
-    }
-  }
-  &__item {
-    @include breakpoint(sm) {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  }
-  &__logo{
-    border-bottom:1px solid #dfe0e1;
+  border-top: 1px solid #b9b9b9;
+  &__card{
     padding: 15px 0;
-    margin: 0 -15px;
-    text-align: center;
-    @include breakpoint(sm){
-      border: none;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-    }
-    a{
-      display: inline-block;
-    }
-  }
-  &__list{
-    padding:15px;
-    border-bottom: 1px solid #dfe0e1;
-    margin: 0 -15px;
-    @include breakpoint(sm){
-      margin:0;
-      padding: 0;
-      border-bottom: none;
-    }
-    h5{
-      font-size: 16px;
-      font-weight: 600;
-      color: $brown;
-      margin-bottom: 15px;
-      padding: 0;
-    }
-    ul{
-      @include breakpoint(sm){
-        display: flex;
-        flex-wrap: wrap;
-      }
-      li{
-        &:nth-child(3n){
-          @include breakpoint(xs){
-            margin-bottom: 15px;
-          }
-        }
-        @include breakpoint(sm){
-          width: 33.333%;
-        }
-        a{
-          font-size: 14px;
-          color: #666!important;
-          display: inline-block;
-          &:hover{
-            color: #666!important;
-          }
-        }
-      }
-    }
-  }
-  &__mail{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 15px 0;
-    @include breakpoint(sm){
-      padding: 0;
-      order: 2;
-      justify-content: flex-end;
-    }
-    .form-group{
-      position: relative;
-      margin-bottom: 0;
-      width: calc(100% - 110px);
-      margin-right: 10px;
-      @include breakpoint(sm){
-        width: 200px;
-      }
-      label{
-        font-size: 14px;
-        text-transform: uppercase;
-        color:$brown;
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 600;
-      }
-      input{
-        border: none;
-        background: #e7e8e9;
-        border-radius: 16px;
-        padding: 5px 25px 5px 10px;
-        width: 100%;
-        &:focus{
-          outline: none;
-        }
-      }
-      i{
-        position: absolute;
-        right:10px;
-        bottom: 8px;
-        color: #6e6f71;
-      }
-    }
-    .btn{
-      width: 100px;
-    }
-  }
-  &__social{
-    padding: 20px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     @include breakpoint(xs){
-      flex-wrap: wrap;
+      text-align: center;
     }
-    @include breakpoint(sm) {
-      padding: 0;
-      order: 1;
-      justify-content: flex-end;
-    }
-    .social-item{
-      display: flex;
-      align-items: center;
-      @include breakpoint(xs){
-        margin-bottom: 10px;
-        &:last-child{
-          margin: 0;
-        }
-      }
-      @include breakpoint(sm){
-        margin-left: 20px;
-      }
-      p{
-        font-size: 14px;
-
-      }
-      a{
-        display: block;
-        padding: 0 5px;
-        svg{
-          fill:$brown;
-          vertical-align: middle;
-          width: 20px;
-        }
-      }
-
+    img{
+      vertical-align: middle;
     }
   }
   &__reserved {
-    background-color:$brown;
+    background-color: $main-color;
     &__text {
       text-align: center;
-      padding: 20px 0;
+      padding: 10px 0;
       @include breakpoint(md) {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 20px 0;
       }
-      p {
+      .p1 {
         font-size: 12px;
         color: $white-1;
       }
       .p2{
-        @include breakpoint(xs) {
-          display: none;
+        @include breakpoint(xs){
+          padding-top: 10px;
+          margin-top: 10px;
+          border-top: 1px solid #fff;
+        }
+        a{
+          color: #fff;
+          font-size: 12px;
+          padding: 0 10px;
+          border-right: 1px solid #fff;
+          &:last-child{
+            border-right: none;
+          }
         }
       }
     }
