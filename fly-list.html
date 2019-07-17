@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>flyvietnam</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="css/libs/flatpickr.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body ontouchstart="">
+    <header class="fly-header fly-header_home">
+      <div class="container">
+        <nav class="navbar navbar-expand-md">
+          <button type="button" data-toggle="collapse" data-target="#collapsibleNavbar" class="navbar-toggler"><i class="fas fa-bars"></i></button><a href="index.html" class="navbar-brand"><img src="images/logo.png"></a>
+          <div id="collapsibleNavbar" class="collapse navbar-collapse">
+            <ul class="navbar-social">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Plan & Book<i class="fas fa-chevron-down"></i></a>
+                <div class="nav-sub">
+                  <div class="nav-sub__content">
+                    <ul>
+                      <li class="li-title">Book Your Trip</li>
+                      <li><a href="#">Domestic Flights</a></li>
+                      <li><a href="#">International Flights</a></li>
+                      <li><a href="#">Fare Types & Rules</a></li>
+                    </ul>
+                    <ul>
+                      <li class="li-title">Fly Experience</li>
+                      <li><a href="#">4 Star Airline Services</a></li>
+                      <li><a href="#">Business Class</a></li>
+                      <li><a href="#">Premium Economy Class</a></li>
+                      <li><a href="#">Economy Class</a></li>
+                      <li><a href="#">Food & Beverages</a></li>
+                      <li><a href="#">In-flight Entertainment</a></li>
+                    </ul>
+                    <ul>
+                      <li class="li-title">The Fleet</li>
+                      <li><a href="#">Boeing 787</a></li>
+                      <li><a href="#">Airbus A350</a></li>
+                      <li><a href="#">Airbus A330</a></li>
+                      <li><a href="#">Airbus A321</a></li>
+                    </ul>
+                    <ul>
+                      <li class="li-title">Flight Info</li>
+                      <li><a href="#">Route Map</a></li>
+                      <li><a href="#">Flight Schedule</a></li>
+                      <li><a href="#">Flight Status</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Travel Info<i class="fas fa-chevron-down"></i></a>
+                <div class="nav-sub">
+                  <div class="nav-sub__content">
+                    <ul>
+                      <li class="li-title">Baggage</li>
+                      <li><a href="#">Cabin/ Hand Baggage</a></li>
+                      <li><a href="#">Checked Baggage</a></li>
+                      <li><a href="#">Excess Baggage</a></li>
+                      <li><a href="#">Retricsted Baggage</a></li>
+                      <li><a href="#">Mishadle Baggage</a></li>
+                      <li><a href="#">Special Baggage</a></li>
+                    </ul>
+                    <ul>
+                      <li class="li-title">Travel infomation</li>
+                      <li><a href="#">Airpost Guide</a></li>
+                      <li><a href="#">Payment Guide</a></li>
+                    </ul>
+                    <ul>
+                      <li class="li-title">Extra Service</li>
+                      <li><a href="#">Repaid / Extra Baggage</a></li>
+                      <li><a href="#">Airpost Transfer Service</a></li>
+                    </ul>
+                    <ul>
+                      <li class="li-title">Special Service</li>
+                      <li><a href="#">Unaccompanied Children</a></li>
+                      <li><a href="#">Passenger with Disabilities</a></li>
+                      <li><a href="#">Pregnant Passenger</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="wrapper">
+      <section class="fly-list">
+        <div class="fly-list__desktop">
+          <div class="note-box">
+            <div class="container">
+              <div class="note-box__content">
+                <div class="note-box__item"><i class="fas fa-check-circle"></i><span>Selection</span></div>
+                <div class="note-box__item"><i class="fas fa-place-of-worship"></i><span>Review</span></div>
+                <div class="note-box__item"><i class="fas fa-male"></i><span>Passenger details</span></div>
+                <div class="note-box__item"><i class="fas fa-credit-card"></i><span>Payment</span></div>
+                <div class="note-box__item"><i class="fas fa-tasks"></i><span>Confirmation</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="fly-info">
+            <div class="container">
+              <div class="fly-info__content">
+                <div class="fly-info__left">
+                  <div class="fly-info__country"><span>HAN<small>Hanoi</small></span><i class="fas fa-arrow-right"></i><span>DOH<small>Doha</small></span></div>
+                  <div class="fly-info__date"><span><small>Tue</small>22 Aug 2019</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span><small>Fri</small>01 Sep 2019</span></div>
+                  <div class="fly-info__passenger">
+                    <p>1 Adult - 2 Child - 1 Infant</p>
+                  </div>
+                </div>
+                <div class="fly-info__right">
+                  <button type="button" class="btn btn-blue">Modify Search<i class="fas fa-chevron-circle-down"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fly-list__main">
+            <div class="container">
+              <div class="fly-list__item">
+                <div class="fly-item">
+                  <div class="fly-item__place">
+                    <div class="d-bllock">
+                      <p class="p-plane"><img src="images/icon-outbound-flight.png"><span>Outbound Flight</span></p>
+                      <div class="place-box">
+                        <div class="place-box__start">
+                          <p>HAN<span>Hanoi</span></p>
+                        </div>
+                        <div class="place-box__icon"><i class="fas fa-arrow-right"></i></div>
+                        <div class="place-box__end">
+                          <p>DOH<span>Doha</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="more-date">
+                      <p>More date<i class="fas fa-calendar-alt"></i></p>
+                    </div>
+                  </div>
+                  <div class="fly-item__slide">
+                    <div class="date-slide">
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Monday</p>
+                            <p class="p2">22 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Tuesday</p>
+                            <p class="p2">23 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item active">
+                          <div class="date-slide__text">
+                            <p class="p1">Wednesday</p>
+                            <p class="p2">24 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Thursday</p>
+                            <p class="p2">25 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Friday</p>
+                            <p class="p2">26 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Saturday</p>
+                            <p class="p2">27 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Sunday</p>
+                            <p class="p2">28 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Friday</p>
+                            <p class="p2">26 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Saturday</p>
+                            <p class="p2">27 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date-slide__col">
+                        <div class="date-slide__item">
+                          <div class="date-slide__text">
+                            <p class="p1">Sunday</p>
+                            <p class="p2">28 Aug 2019</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fly-item__outbound">
+                    <div class="outbound-box">
+                      <div class="outbound-box__header">
+                        <p>Outbound Flight</p>
+                        <p>836,00 USD</p>
+                        <p>Total Price</p>
+                      </div>
+                      <div class="outbound-box__content">
+                        <div class="outbound-box__left">
+                          <div class="d-block">
+                            <p class="p1">Tue, 22 Aug 2017</p>
+                            <p class="p2">HAN<strong>9:45</strong></p>
+                            <p class="p3">Hanoi, VN</p>
+                          </div>
+                          <div class="d-block d-block_icon"><i class="fas fa-arrow-right"></i></div>
+                          <div class="d-block">
+                            <p class="p1">Tue, 22 Aug 2017</p>
+                            <p class="p2">HAN<strong>9:45</strong></p>
+                            <p class="p3">Hanoi, VN</p>
+                          </div>
+                        </div>
+                        <div class="outbound-box__center">
+                          <p>Select your inbound Flight</p>
+                        </div>
+                        <div class="outbound-box__right">
+                          <div class="d-block">
+                            <p class="p1">836,00 USD</p>
+                            <p class="p2">For All Passenger</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ticket-table">
+                    <div class="ticket-table__header">
+                      <div class="ticket-table__row">
+                        <div class="ticket-table__left">
+                          <div class="sort-box">
+                            <div class="sort-box__left">
+                              <p>Sort by</p>
+                            </div>
+                            <div class="sort-box__right">
+                              <div class="d-block">
+                                <button type="button" class="btn"><i class="fas fa-plane-departure"></i>Departure time</button>
+                                <button type="button" class="btn"><i class="fas fa-plane-arrival"></i>Arrival time</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ticket-table__right">
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__type">
+                              <p class="p1">Economy Save</p>
+                              <p class="p2"><i class="fas fa-suitcase"></i><span>30kg</span></p>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__type">
+                              <p class="p1">Economy value</p>
+                              <p class="p2"><i class="fas fa-suitcase"></i><span>30kg</span></p>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__type">
+                              <p class="p1">Economy Flexi</p>
+                              <p class="p2"><i class="fas fa-suitcase"></i><span>30kg</span></p>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__type">
+                              <p class="p1">Economy Value</p>
+                              <p class="p2"><i class="fas fa-suitcase"></i><span>30kg</span></p>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__type">
+                              <p class="p1">Business Flexi</p>
+                              <p class="p2"><i class="fas fa-suitcase"></i><span>30kg</span></p>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__type">
+                              <p class="p1">Business Value</p>
+                              <p class="p2"><i class="fas fa-suitcase"></i><span>30kg</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ticket-table__collapse">
+                      <h5>WHAT'S INCLUDED IN MY FARE ON ICELANDAIR FLIGHTS?</h5>
+                      <div class="ticket-table__row">
+                        <div class="ticket-table__left">
+                          <div class="icon-box">
+                            <p><span>Carry-on baggage</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Request your seat</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>In-flight entertainment</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Saga Points</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Checked baggage</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Meat</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Changeable ticket</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Refundable</span><i class="fas fa-suitcase"></i></p>
+                            <p><span>Lounge Access</span><i class="fas fa-suitcase"></i></p>
+                          </div>
+                        </div>
+                        <div class="ticket-table__right">
+                          <div class="ticket-table__col col_6">
+                            <div class="seat-item">
+                              <div class="seat-item__title">
+                                <p>Trip Duration</p>
+                              </div>
+                              <div class="seat-item__content">
+                                <p>1 x 22 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p>1 x 50 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="seat-item">
+                              <div class="seat-item__title">
+                                <p>Low Budget</p>
+                              </div>
+                              <div class="seat-item__content">
+                                <p>1 x 22 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p>1 x 50 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="seat-item">
+                              <div class="seat-item__title">
+                                <p>Eco Promotion</p>
+                              </div>
+                              <div class="seat-item__content">
+                                <p>1 x 22 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p>1 x 50 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="seat-item">
+                              <div class="seat-item__title">
+                                <p>Economy Saver</p>
+                              </div>
+                              <div class="seat-item__content">
+                                <p>1 x 22 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p>1 x 50 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="seat-item">
+                              <div class="seat-item__title">
+                                <p>Economy Flex</p>
+                              </div>
+                              <div class="seat-item__content">
+                                <p>1 x 22 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p>1 x 50 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="seat-item">
+                              <div class="seat-item__title">
+                                <p>Premium Economy</p>
+                              </div>
+                              <div class="seat-item__content">
+                                <p>1 x 22 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p><i class="fas fa-check"></i></p>
+                                <p>1 x 50 lbs</p>
+                                <p><i class="fas fa-check"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket-table__text">
+                        <div class="d-left">
+                          <p>Show full fares comparison</p>
+                        </div>
+                        <div class="d-right">
+                          <p>Services included in the fare  Chargeable service * no change fee but fare difference may apply Fare not available Price for 1 adult.You will be able to select the additional services afterwards. Free of charge services are also on request.Services marked  are included by default, and do not require any selection.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ticket-table__body">
+                      <div class="ticket-table__row">
+                        <div class="ticket-table__left">
+                          <div class="trip-box">
+                            <div class="trip-box__start">
+                              <p class="p1">(SGN) 16h20</p>
+                              <p class="p2">Hanoi, Vietnam</p>
+                              <p class="p3">Hanoi, Noibai International Airport Vietnam</p>
+                              <div class="p4">QR 0385 Boeing 777 - 300ER</div>
+                            </div>
+                            <div class="trip-box__icon"><img src="images/icon-stop.png">
+                              <p class="p1">01h10</p>
+                              <p class="p2"><span class="red-2">2 stop(s)</span>(SIN, LHR)</p>
+                            </div>
+                            <div class="trip-box__end">
+                              <p class="p1">(DOH) 17h30</p>
+                              <p class="p2">Doha, Quatar</p>
+                              <p class="p3">Doha, Hamad International Airport Quatar</p>
+                              <div class="p4">QR 0385 Boeing 777 - 300ER</div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__show">
+                            <p class="p-show-detail"><span>More details</span></p>
+                          </div>
+                        </div>
+                        <div class="ticket-table__right">
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__cell">
+                              <div class="d-block">
+                                <div class="ticket-table__check"><i class="fas fa-check"></i></div>
+                                <p class="p2">579.85</p>
+                                <p class="p1">USD</p>
+                                <p class="p3">3 Seat (8) Left</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__cell">
+                              <div class="d-block">
+                                <div class="ticket-table__check"><i class="fas fa-check"></i></div>
+                                <p class="p2">579.85</p>
+                                <p class="p1">USD</p>
+                                <p class="p3">3 Seat (8) Left</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__cell">
+                              <div class="d-block">
+                                <div class="ticket-table__check"><i class="fas fa-check"></i></div>
+                                <p class="p2">579.85</p>
+                                <p class="p1">USD</p>
+                                <p class="p3">3 Seat (8) Left</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__cell">
+                              <div class="d-block">
+                                <div class="ticket-table__check"><i class="fas fa-check"></i></div>
+                                <p class="p2">579.85</p>
+                                <p class="p1">USD</p>
+                                <p class="p3">3 Seat (8) Left</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__cell">
+                              <div class="d-block">
+                                <div class="ticket-table__check"><i class="fas fa-check"></i></div>
+                                <p class="p2">579.85</p>
+                                <p class="p1">USD</p>
+                                <p class="p3">3 Seat (8) Left</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ticket-table__col col_6">
+                            <div class="ticket-table__cell">
+                              <div class="d-block">
+                                <div class="ticket-table__check"><i class="fas fa-check"></i></div>
+                                <p class="p2">579.85</p>
+                                <p class="p1">USD</p>
+                                <p class="p3">3 Seat (8) Left</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket-table__detail">
+                        <div class="detail-section">
+                          <div class="detail-section__header">
+                            <p class="p1"><span>HAN<small>Hanoi</small></span><i class="fas fa-arrow-right"></i><span>DOH<small>Doha</small></span></p>
+                            <p class="p2">Economy Flexi</p>
+                          </div>
+                          <div class="detail-section__content">
+                            <div class="detail-section__left">
+                              <div class="trip-box">
+                                <div class="trip-box__start">
+                                  <p class="p5">Tue , 22 Aug 2017</p>
+                                  <p class="p1">(SGN) 16h20</p>
+                                  <p class="p2">Hanoi, Vietnam</p>
+                                  <p class="p3">Hanoi, Noibai International Airport Vietnam</p>
+                                  <div class="p4">QR 0385 Boeing 777 - 300ER</div>
+                                </div>
+                                <div class="trip-box__icon"><img src="images/icon-stop.png">
+                                  <p class="p1">01h10</p>
+                                  <p class="p2"><span class="red-2">2 stop(s)</span>(SIN, LHR)</p>
+                                </div>
+                                <div class="trip-box__end">
+                                  <p class="p5">Tue , 22 Aug 2017</p>
+                                  <p class="p1">(DOH) 17h30</p>
+                                  <p class="p2">Doha, Quatar</p>
+                                  <p class="p3">Doha, Hamad International Airport Quatar</p>
+                                  <div class="p4">QR 0385 Boeing 777 - 300ER</div>
+                                </div>
+                              </div>
+                              <div class="detail-section__total">
+                                <p>Total Duration: 9h45 pm</p>
+                              </div>
+                            </div>
+                            <div class="detail-section__right">
+                              <div class="fare-box">
+                                <div class="fare-box__header">
+                                  <p>Fare Detail</p>
+                                </div>
+                                <div class="fare-box__content">
+                                  <div class="fare-box__icon"><i class="fas fa-tasks"></i>
+                                    <p>Changes<span>Free of Charge</span></p>
+                                  </div>
+                                  <div class="fare-box__icon"><i class="fas fa-tasks"></i>
+                                    <p>Cancellation<span>85 USD</span></p>
+                                  </div>
+                                  <div class="fare-box__icon"><i class="fas fa-tasks"></i>
+                                    <p>No Show<span>85 USD</span></p>
+                                  </div>
+                                  <div class="fare-box__icon"><i class="fas fa-tasks"></i>
+                                    <p>Hand Baggage<span>One piece , not to exceed 7kg</span></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fly-list__mobile"></div>
+      </section>
+    </main>
+    <footer class="fly-footer">
+      <div class="container">
+        <div class="fly-footer__card"><img src="images/card-footer.png"></div>
+      </div>
+      <div class="fly-footer__reserved">
+        <div class="container">
+          <div class="fly-footer__reserved__text">
+            <p class="p1">VietnamFlightCentre © 2017. All rights reserved.</p>
+            <div class="p2"><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">FAQ</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/flatpickr.js"></script>
+    <script>
+      $('.nav-link').click(function () {
+      
+          $(this).next('.nav-sub').slideToggle(400);
+          $('.nav-item.active .nav-sub').slideUp(400);
+      
+          $(this).parent('.nav-item').toggleClass('active');
+          $(this).parent('.nav-item').siblings().removeClass('active');
+      
+      
+      });
+      
+    </script>
+    <script>
+      $('.date-slide').slick({
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          //autoplay: true,
+          speed: 500,
+          infinite: false,
+          responsive: [
+              {
+                  breakpoint: 1024,
+                  settings: {
+                      slidesToShow: 5,
+                      slidesToScroll: 1
+                  }
+              },
+              {
+                  breakpoint: 767,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 1
+                  }
+              }
+          ]
+      });
+    </script>
+    <script>
+      $('.ticket-table__cell').click(function () {
+          $('.ticket-table__cell').removeClass('active');
+          $(this).addClass('active');
+      });
+      
+      $('.ticket-table__type').click(function () {
+          $(this).parents('.ticket-table').find('.ticket-table__collapse').slideToggle(400);
+      });
+    </script>
+  </body>
+</html>
