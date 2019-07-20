@@ -58,7 +58,7 @@ button.close{
   width: 20px;
   height: 20px;
   line-height:21px;
-  background-color: $orange;
+  background-color: $main-color;
   border-radius: 50%;
   opacity: 1;
   text-shadow: none;
@@ -73,6 +73,6 @@ button.close{
   }
   &:hover{
     opacity: 1;
-    color: $brown;
+    color: #fff;
   }
 }

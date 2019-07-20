@@ -8,148 +8,146 @@ html(lang="vi")
         include jades/header.jade
         main.wrapper
             section.fly-list
-                .fly-list__desktop
-                    .note-box
-                        .container
-                            .note-box__content
-                                .note-box__item
-                                    i.fas.fa-check-circle
-                                    span Selection
-                                .note-box__item
-                                    i.fas.fa-place-of-worship
-                                    span Review
-                                .note-box__item
-                                    i.fas.fa-male
-                                    span Passenger details
-                                .note-box__item
-                                    i.fas.fa-credit-card
-                                    span Payment
-                                .note-box__item
-                                    i.fas.fa-tasks
-                                    span Confirmation
-                    .fly-info
-                        .container
-                            .fly-info__content
-                                .fly-info__left
-                                    .fly-info__country
-                                        span HAN
-                                            small Hanoi
-                                        i.fas.fa-arrow-right
-                                        span DOH
-                                            small Doha
-                                    .fly-info__date
-                                        span
-                                            small Tue
-                                            | 22 Aug 2019
-                                        | &nbsp;&nbsp;-&nbsp;&nbsp;
-                                        span
-                                            small Fri
-                                            | 01 Sep 2019
-                                    .fly-info__passenger
-                                        p 1 Adult - 2 Child - 1 Infant
-                                .fly-info__right
-                                    button.btn.btn-blue(type='button')
-                                        | Modify Search
-                                        i.fas.fa-chevron-circle-down
-                    .fly-list__main
-                        .container
-                            .fly-list__outbound
-                                .outbound-box
-                                    .outbound-box__header
-                                        p Outbound Flight
-                                        p 836,00 USD
-                                        p Total Price
-                                    .outbound-box__content
-                                        .outbound-box__left
-                                            .d-block
-                                                p.p1 Tue, 22 Aug 2017
-                                                p.p2 HAN
-                                                    strong 9:45
-                                                p.p3 Hanoi, VN
-                                            .d-block.d-block_icon
+                .note-box
+                    .container
+                        .note-box__content
+                            .note-box__item
+                                i.fas.fa-check-circle
+                                span Selection
+                            .note-box__item
+                                i.fas.fa-place-of-worship
+                                span Review
+                            .note-box__item
+                                i.fas.fa-male
+                                span Passenger details
+                            .note-box__item
+                                i.fas.fa-credit-card
+                                span Payment
+                            .note-box__item
+                                i.fas.fa-tasks
+                                span Confirmation
+                .fly-info
+                    .container
+                        .fly-info__content
+                            .fly-info__left
+                                .fly-info__country
+                                    span HAN
+                                        small Hanoi
+                                    i.fas.fa-arrow-right
+                                    span DOH
+                                        small Doha
+                                .fly-info__date
+                                    span
+                                        small Tue
+                                        | 22 Aug 2019
+                                    | &nbsp;&nbsp;-&nbsp;&nbsp;
+                                    span
+                                        small Fri
+                                        | 01 Sep 2019
+                                .fly-info__passenger
+                                    p 1 Adult - 2 Child - 1 Infant
+                            .fly-info__right
+                                button.btn.btn-blue(type='button' data-toggle="modal" data-target="#homeSearch")
+                                    | Modify Search
+                                    i.fas.fa-chevron-circle-down
+                .fly-list__main
+                    .container
+                        .fly-list__outbound
+                            .outbound-box
+                                .outbound-box__header
+                                    p Outbound Flight
+                                    p 836,00 USD
+                                    p Total Price
+                                .outbound-box__content
+                                    .outbound-box__left
+                                        .d-block
+                                            p.p1 Tue, 22 Aug 2017
+                                            p.p2 HAN
+                                                strong 9:45
+                                            p.p3 Hanoi, VN
+                                        .d-block.d-block_icon
+                                            i.fas.fa-arrow-right
+                                        .d-block
+                                            p.p1 Tue, 22 Aug 2017
+                                            p.p2 HAN
+                                                strong 9:45
+                                            p.p3 Hanoi, VN
+                                    .outbound-box__center
+                                        p Select your inbound Flight
+                                    .outbound-box__right
+                                        .d-block
+                                            p.p1 836,00 USD
+                                            p.p2 For All Passenger
+                        // chieu di
+                        .fly-list__item
+                            .fly-item
+                                .fly-item__place
+                                    .d-block
+                                        p.p-plane
+                                            img(src='images/icon-outbound-flight.png')
+                                            span Outbound Flight
+                                        .place-box
+                                            .place-box__start
+                                                p HAN
+                                                    span Hanoi
+                                            .place-box__icon
                                                 i.fas.fa-arrow-right
-                                            .d-block
-                                                p.p1 Tue, 22 Aug 2017
-                                                p.p2 HAN
-                                                    strong 9:45
-                                                p.p3 Hanoi, VN
-                                        .outbound-box__center
-                                            p Select your inbound Flight
-                                        .outbound-box__right
-                                            .d-block
-                                                p.p1 836,00 USD
-                                                p.p2 For All Passenger
-                            .fly-list__item
-                                .fly-item
-                                    .fly-item__place
-                                        .d-bllock
-                                            p.p-plane
-                                                img(src='images/icon-outbound-flight.png')
-                                                span Outbound Flight
-                                            .place-box
-                                                .place-box__start
-                                                    p HAN
-                                                        span Hanoi
-                                                .place-box__icon
-                                                    i.fas.fa-arrow-right
-                                                .place-box__end
-                                                    p DOH
-                                                        span Doha
-                                        .more-date
-                                            p More date
-                                                i.fas.fa-calendar-alt
-                                    .fly-item__slide
-                                        .date-slide
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Monday
-                                                        p.p2 22 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Tuesday
-                                                        p.p2 23 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item.active
-                                                    .date-slide__text
-                                                        p.p1 Wednesday
-                                                        p.p2 24 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Thursday
-                                                        p.p2 25 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Friday
-                                                        p.p2 26 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Saturday
-                                                        p.p2 27 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Sunday
-                                                        p.p2 28 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Friday
-                                                        p.p2 26 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Saturday
-                                                        p.p2 27 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Sunday
-                                                        p.p2 28 Aug 2019
+                                            .place-box__end
+                                                p DOH
+                                                    span Doha
+                                .fly-item__slide
+                                    .date-slide
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Monday
+                                                    p.p2 22 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Tuesday
+                                                    p.p2 23 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item.active
+                                                .date-slide__text
+                                                    p.p1 Wednesday
+                                                    p.p2 24 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Thursday
+                                                    p.p2 25 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Friday
+                                                    p.p2 26 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Saturday
+                                                    p.p2 27 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Sunday
+                                                    p.p2 28 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Friday
+                                                    p.p2 26 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Saturday
+                                                    p.p2 27 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Sunday
+                                                    p.p2 28 Aug 2019
+                                .fly-item__desktop
                                     .ticket-table
                                         .ticket-table__header
                                             .ticket-table__row
@@ -605,77 +603,246 @@ html(lang="vi")
                                                                             p Hand Baggage
                                                                                 span One piece , not to exceed 7kg
 
-                            .fly-list__item
-                                .fly-item
-                                    .fly-item__place
-                                        .d-bllock
-                                            p.p-plane
-                                                img(src='images/icon-outbound-flight.png')
-                                                span Outbound Flight
-                                            .place-box
-                                                .place-box__start
-                                                    p HAN
-                                                        span Hanoi
-                                                .place-box__icon
-                                                    i.fas.fa-arrow-right
-                                                .place-box__end
-                                                    p DOH
-                                                        span Doha
-                                        .more-date
-                                            p More date
-                                                i.fas.fa-calendar-alt
-                                    .fly-item__slide
-                                        .date-slide
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Monday
-                                                        p.p2 22 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Tuesday
-                                                        p.p2 23 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item.active
-                                                    .date-slide__text
-                                                        p.p1 Wednesday
-                                                        p.p2 24 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Thursday
-                                                        p.p2 25 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Friday
-                                                        p.p2 26 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Saturday
-                                                        p.p2 27 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Sunday
-                                                        p.p2 28 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Friday
-                                                        p.p2 26 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Saturday
-                                                        p.p2 27 Aug 2019
-                                            .date-slide__col
-                                                .date-slide__item
-                                                    .date-slide__text
-                                                        p.p1 Sunday
-                                                        p.p2 28 Aug 2019
+                                .fly-item__mobile
+                                    .ticket-box
+                                        .ticket-box__header
+                                            .trip-box
+                                                .trip-box__start
+                                                    p.p1 (SGN) 16h20
+                                                    p.p2 Hanoi, Vietnam
+                                                    p.p3 Hanoi, Noibai International Airport Vietnam
+                                                    .p4 QR 0385 Boeing 777 - 300ER
+
+                                                .trip-box__icon
+                                                    img(src='images/icon-stop.png')
+                                                    p.p1 01h10
+                                                    p.p2
+                                                        span.red-2 2 stop(s)
+                                                        | (SIN, LHR)
+                                                .trip-box__end
+                                                    p.p1 (DOH) 17h30
+                                                    p.p2 Doha, Quatar
+                                                    p.p3 Doha, Hamad International Airport Quatar
+                                                    .p4 QR 0385 Boeing 777 - 300ER
+                                            .ticket-box__show
+                                                p.p-show-detail
+                                                    i.fas.fa-caret-right
+                                                    span Show flight details
+                                        .ticket-box__detail
+                                            .detail-section
+                                                .detail-section__header
+                                                    p.p1
+                                                        span HAN
+                                                            small Hanoi
+                                                        i.fas.fa-arrow-right
+                                                        span DOH
+                                                            small Doha
+                                                    p.p2 Economy Flexi
+                                                .detail-section__content
+                                                    .detail-section__left
+                                                        .trip-box
+                                                            .trip-box__start
+                                                                p.p5 Tue , 22 Aug 2017
+                                                                p.p1 (SGN) 16h20
+                                                                p.p2 Hanoi, Vietnam
+                                                                p.p3 Hanoi, Noibai International Airport Vietnam
+                                                                .p4 QR 0385 Boeing 777 - 300ER
+
+                                                            .trip-box__icon
+                                                                img(src='images/icon-stop.png')
+                                                                p.p1 01h10
+                                                                p.p2
+                                                                    span.red-2 2 stop(s)
+                                                                    | (SIN, LHR)
+                                                            .trip-box__end
+                                                                p.p5 Tue , 22 Aug 2017
+                                                                p.p1 (DOH) 17h30
+                                                                p.p2 Doha, Quatar
+                                                                p.p3 Doha, Hamad International Airport Quatar
+                                                                .p4 QR 0385 Boeing 777 - 300ER
+                                                        .detail-section__total
+                                                            p Total Duration: 9h45 pm
+                                                    .detail-section__right
+                                                        .fare-box
+                                                            .fare-box__header
+                                                                p Fare Detail
+                                                            .fare-box__content
+                                                                .fare-box__icon
+                                                                    i.fas.fa-server
+                                                                    p Changes
+                                                                        span Free of Charge
+
+                                                                .fare-box__icon
+                                                                    i.fas.fa-tasks
+                                                                    p Cancellation
+                                                                        span 85 USD
+                                                                .fare-box__icon
+                                                                    i.fas.fa-fighter-jet
+                                                                    p No Show
+                                                                        span 85 USD
+
+                                                                .fare-box__icon
+                                                                    i.fas.fa-briefcase
+                                                                    p Hand Baggage
+                                                                        span One piece , not to exceed 7kg
+
+                                        .ticket-box__main
+                                            .ticket-box__item.item-yellow
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Economy Save
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                          c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-blue
+                                                .ticket-box__left
+                                                    p.p-soldout Sold out
+                                                button.ticket-box__type
+                                                    p Economy value
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                          c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-yellow
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Economy Flexi
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                      c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-blue
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 1.579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Economy Saver
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                      c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-yellow
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                    p Economy Flex
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-blue
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 1.579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Premium Economy
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+                        // end chieu di
+
+
+                        // chieu ve
+                        .fly-list__item
+                            .fly-item
+                                .fly-item__place
+                                    .d-block
+                                        p.p-plane
+                                            img(src='images/icon-outbound-flight.png')
+                                            span Outbound Flight
+                                        .place-box
+                                            .place-box__start
+                                                p HAN
+                                                    span Hanoi
+                                            .place-box__icon
+                                                i.fas.fa-arrow-right
+                                            .place-box__end
+                                                p DOH
+                                                    span Doha
+                                .fly-item__slide
+                                    .date-slide
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Monday
+                                                    p.p2 22 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Tuesday
+                                                    p.p2 23 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item.active
+                                                .date-slide__text
+                                                    p.p1 Wednesday
+                                                    p.p2 24 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Thursday
+                                                    p.p2 25 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Friday
+                                                    p.p2 26 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Saturday
+                                                    p.p2 27 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Sunday
+                                                    p.p2 28 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Friday
+                                                    p.p2 26 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Saturday
+                                                    p.p2 27 Aug 2019
+                                        .date-slide__col
+                                            .date-slide__item
+                                                .date-slide__text
+                                                    p.p1 Sunday
+                                                    p.p2 28 Aug 2019
+                                .fly-item__desktop
                                     .ticket-table
                                         .ticket-table__header
                                             .ticket-table__row
@@ -1131,14 +1298,312 @@ html(lang="vi")
                                                                             p Hand Baggage
                                                                                 span One piece , not to exceed 7kg
 
-                .fly-list__mobile
+                                .fly-item__mobile
+                                    .ticket-box
+                                        .ticket-box__header
+                                            .trip-box
+                                                .trip-box__start
+                                                    p.p1 (SGN) 16h20
+                                                    p.p2 Hanoi, Vietnam
+                                                    p.p3 Hanoi, Noibai International Airport Vietnam
+                                                    .p4 QR 0385 Boeing 777 - 300ER
+
+                                                .trip-box__icon
+                                                    img(src='images/icon-stop.png')
+                                                    p.p1 01h10
+                                                    p.p2
+                                                        span.red-2 2 stop(s)
+                                                        | (SIN, LHR)
+                                                .trip-box__end
+                                                    p.p1 (DOH) 17h30
+                                                    p.p2 Doha, Quatar
+                                                    p.p3 Doha, Hamad International Airport Quatar
+                                                    .p4 QR 0385 Boeing 777 - 300ER
+                                            .ticket-box__show
+                                                p.p-show-detail
+                                                    i.fas.fa-caret-right
+                                                    span Show flight details
+                                        .ticket-box__detail
+                                            .detail-section
+                                                .detail-section__header
+                                                    p.p1
+                                                        span HAN
+                                                            small Hanoi
+                                                        i.fas.fa-arrow-right
+                                                        span DOH
+                                                            small Doha
+                                                    p.p2 Economy Flexi
+                                                .detail-section__content
+                                                    .detail-section__left
+                                                        .trip-box
+                                                            .trip-box__start
+                                                                p.p5 Tue , 22 Aug 2017
+                                                                p.p1 (SGN) 16h20
+                                                                p.p2 Hanoi, Vietnam
+                                                                p.p3 Hanoi, Noibai International Airport Vietnam
+                                                                .p4 QR 0385 Boeing 777 - 300ER
+
+                                                            .trip-box__icon
+                                                                img(src='images/icon-stop.png')
+                                                                p.p1 01h10
+                                                                p.p2
+                                                                    span.red-2 2 stop(s)
+                                                                    | (SIN, LHR)
+                                                            .trip-box__end
+                                                                p.p5 Tue , 22 Aug 2017
+                                                                p.p1 (DOH) 17h30
+                                                                p.p2 Doha, Quatar
+                                                                p.p3 Doha, Hamad International Airport Quatar
+                                                                .p4 QR 0385 Boeing 777 - 300ER
+                                                        .detail-section__total
+                                                            p Total Duration: 9h45 pm
+                                                    .detail-section__right
+                                                        .fare-box
+                                                            .fare-box__header
+                                                                p Fare Detail
+                                                            .fare-box__content
+                                                                .fare-box__icon
+                                                                    i.fas.fa-server
+                                                                    p Changes
+                                                                        span Free of Charge
+
+                                                                .fare-box__icon
+                                                                    i.fas.fa-tasks
+                                                                    p Cancellation
+                                                                        span 85 USD
+                                                                .fare-box__icon
+                                                                    i.fas.fa-fighter-jet
+                                                                    p No Show
+                                                                        span 85 USD
+
+                                                                .fare-box__icon
+                                                                    i.fas.fa-briefcase
+                                                                    p Hand Baggage
+                                                                        span One piece , not to exceed 7kg
+
+                                        .ticket-box__main
+                                            .ticket-box__item.item-yellow
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Economy Save
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-blue
+                                                .ticket-box__left
+                                                    p.p-soldout Sold out
+                                                button.ticket-box__type
+                                                    p Economy value
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-yellow
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Economy Flexi
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                              c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-blue
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 1.579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Economy Saver
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                              c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-yellow
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                    p Economy Flex
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                                                          c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            .ticket-box__item.item-blue
+                                                .ticket-box__left
+                                                    .ticket-box__check
+                                                        i.fas.fa-check
+                                                    .ticket-box__price
+                                                        p.p1 USD
+                                                        p.p2 1.579.58
+                                                    .ticket-box__chair
+                                                        p 3 Seat (8) Left
+                                                button.ticket-box__type
+                                                    p Premium Economy
+                                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                        path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                                                          c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+                        // end chieu ve
+
+                        .fly-list__btn
+                            a.btn.btn-blue(href='fly-checkout.html') Continue
+        #homeSearch.modal.fade
+            .modal-dialog
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal') ×
+                        .home-search
+                            .home-search__header
+                                .home-search__title
+                                    img(src='images/search-logo.png')
+                                    h5 Book your flight
+                            .home-search__content
+                                .home-search__left
+                                    ul.home-search__tab
+                                        li.active
+                                            button#btn1(type='button') Round Trip
+
+                                        li
+                                            button#btn2(type='button') One Way
+
+                                        li
+                                            button#btn3(type='button') Multiple Destination
+
+                                    .home-search__group.no-multi
+                                        .home-search__item
+                                            .form-group.form-group_from
+                                                label From
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                include jades/search-default.jade
+                                            .form-group.form-group_to
+                                                label To
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                include jades/search-default.jade
+                                            .form-group.form-group_depart
+                                                label Depart
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                i.fas.fa-calendar-alt
+                                            .form-group.form-group_return
+                                                label Return
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                i.fas.fa-calendar-alt
+                                    .home-search__group.multi.d-none
+                                        .home-search__item
+                                            .form-group.form-group_from
+                                                label From
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                include jades/search-default.jade
+                                            .form-group.form-group_to
+                                                label To
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                include jades/search-default.jade
+                                            .form-group.form-group_depart
+                                                label Depart
+                                                input.form-control(type='text' placeholder='Choose origin')
+                                                i.fas.fa-calendar-alt
+                                            .form-group.form-group_close
+                                                button.btn(type='button')
+                                                    | &#215;
+                                        .home-search__add
+                                            button.btn.btn-blue.btn-round(type='button') Add Flights
+                                .home-search__right
+                                    p.p1 Travellers
+                                    .home-search__travellers
+                                        .form-group.form-group_adults
+                                            label Adults
+                                            select.form-control
+                                                option 1
+                                                option 2
+                                                option 3
+
+                                        .form-group.form-group_child
+                                            label Children
+                                            select.form-control
+                                                option 1
+                                                option 2
+                                                option 3
+                                            p.p2 2 - 11 years
+                                        .form-group.form-group_infants
+                                            label Infants
+                                            select.form-control
+                                                option 1
+                                                option 2
+                                                option 3
+
+                                            p.p2 up to 2 years
+                                    .home-search__btn
+                                        a.btn.btn-blue.btn-round(href='fly-list.html') Find Flights
+
         include jades/footer.jade
         script(type='text/javascript' src="js/jquery-3.3.1.min.js")
         script(type='text/javascript' src="js/popper.min.js")
         script(type='text/javascript' src="js/bootstrap.min.js")
         script(type='text/javascript' src="js/slick.min.js")
         script(type='text/javascript' src="js/flatpickr.js")
+        script.
+            $('.form-group_depart input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
 
+            $('.form-group_return input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+        script.
+            $('.home-search__tab li button').click(function () {
+                $(this).parent('li').addClass('active');
+                $(this).parent('li').siblings().removeClass('active');
+            });
+            $('#btn1').click(function () {
+                $('.form-group_return').removeClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#btn2').click(function () {
+                $('.form-group_return').addClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#btn3').click(function () {
+                $('.multi').removeClass('d-none');
+                $('.no-multi').addClass('d-none');
+            });
+        script.
+            $('.form-group_from input').click(function () {
+                $(this).parents('.form-group_from').children('.search-default').toggleClass('d-none');
+                $('.form-group_to .search-default').addClass('d-none');
+            });
+            $('.form-group_to input').click(function () {
+                $(this).parents('.form-group_to').children('.search-default').toggleClass('d-none');
+                $('.form-group_from .search-default').addClass('d-none');
+            });
         script.
             $('.nav-link').click(function () {
 
@@ -1185,13 +1650,23 @@ html(lang="vi")
                 $(this).parents('.ticket-table__item').siblings().find('.ticket-table__detail').slideUp();
             });
         script.
-            var outboundBox = $('.outbound-box').offset().top;
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= outboundBox) {
-                    $('.outbound-box').addClass('fixed-top');
-                } else {
-                    $('.outbound-box').removeClass('fixed-top');
-                }
+            if (screen.width >= 768) {
+                var outboundBox = $('.outbound-box').offset().top;
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() >= outboundBox) {
+                        $('.outbound-box').addClass('fixed-top');
+                    } else {
+                        $('.outbound-box').removeClass('fixed-top');
+                    }
+                });
+            };
+
+        script.
+            $('.ticket-box__show .p-show-detail').click(function () {
+                $(this).parents('.ticket-box').find('.ticket-box__detail').slideToggle(400);
+                $(this).parents('.ticket-box').toggleClass('open-detail');
             });
-
-
+            $('.ticket-box__check').click(function () {
+                $('.ticket-box__item').removeClass('active');
+                $(this).parents('.ticket-box__item').addClass('active');
+            });
