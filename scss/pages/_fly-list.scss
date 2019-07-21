@@ -8,6 +8,16 @@
     padding-left: 5px;
   }
 }
+.p-plane{
+  span{
+    color: #999;
+    padding-left: 5px;
+    font-size: 14px;
+  }
+  img,span{
+    vertical-align: middle;
+  }
+}
 .seat-item{
   text-align: center;
   height: 100%;
@@ -641,16 +651,6 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 15px 0;
-    .p-plane{
-      span{
-        color: #999;
-        padding-left: 5px;
-        font-size: 14px;
-      }
-      img,span{
-        vertical-align: middle;
-      }
-    }
   }
   &__date{
     background-color: $brown;

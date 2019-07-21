@@ -1,24 +1,235 @@
+.summary-box{
+  @include breakpoint(sm){
+    position: relative;
+  }
+  &__active{
+    background-color: $main-color;
+    padding: 15px;
+    cursor: pointer;
+    @include breakpoint(sm){
+      padding: 15px 30px;
+    }
+    p{
+      color: #fff;
+    }
+    .p1{
+      font-size: 12px;
+    }
+    .p2{
+      font-size: 18px;
+      font-weight: $semibold;
+      i{
+        margin-left: 10px;
+      }
+    }
+  }
+  &__detail{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 15px;
+    @include breakpoint(sm){
+      width: 300px;
+      left: auto;
+      right: 0;
+    }
+  }
+  &__item{
+    padding: 10px 0;
+    border-bottom: 1px dotted #ddd;
+    &:last-child{
+      border-bottom: none;
+    }
+    .p1{
+      color: #999;
+      font-size: 14px;
+    }
+  }
+  &__price{
+    display: flex;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    margin: 0 -15px;
+    .d-block{
+      width: 50%;
+      .p1{
+        font-size: 18px;
+        color: #999;
+        font-weight: $semibold;
+      }
+      .p2{
+        font-size: 12px;
+        color: #999;
+      }
+      .p-total{
+        font-size: 18px;
+        color: $main-color;
+        font-weight: $semibold;
+        text-align: right;
+      }
+    }
+  }
+  &__fare{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      font-size: 12px;
+      color: #007bff;
+    }
+  }
+}
+.price-breakdown{
+  position: relative;
+  &:hover{
+    .price-breakdown__box{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .p-active{
+    font-size: 12px;
+    color: #007bff;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__title{
+    font-size: 16px;
+    color: $main-color;
+    font-weight: $bold;
+    padding: 0 0 10px;
+    border-bottom: 1px solid $main-color;
+  }
+  &__box{
+    padding: 15px;
+    width: 320px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    @include breakpoint(sm){
+      width: 450px;
+      left: auto;
+      right: 0;
+    }
+    .table{
+      th,td{
+        font-size: 14px;
+        @include breakpoint(xs){
+          white-space: nowrap;
+          vertical-align: top;
+        }
+      }
+      th{
+        @include breakpoint(sm){
+          vertical-align: top;
+        }
+      }
+      .tr-indent{
+        td{
+          font-size: 12px;
+          font-style: italic;
+          padding: .5rem;
+        }
+      }
+      .tr-total{
+        td{
+          font-size: 22px;
+          font-weight: $bold;
+        }
+        .td-title{
+          color: #999;
+        }
+        .td-price{
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+.checkout-tab{
+  @include breakpoint(xs){
+    display: flex;
+  }
+  &__item{
+    background-color: #f2f2f2;
+    padding: 15px;
+    cursor: pointer;
+    @include breakpoint(xs){
+      width: 50%;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    @include breakpoint(sm){
+      border-bottom: 1px solid #ddd;
+    }
+    &:last-child{
+      @include breakpoint(xs){
+        border-left: none;
+      }
+    }
+    &.active{
+      background-color: #fff;
+      @include breakpoint(xs){
+
+      }
+      p{
+        color: $main-color;
+        font-weight: $semibold;
+      }
+    }
+    p{
+      color: #a4a4a4;
+      font-size: 14px;
+    }
+  }
+}
 .form-checkout{
   margin-bottom: 30px;
   @include breakpoint(sm){
-    box-shadow: $shadow;
+    display: flex;
+    border: 1px solid #ddd;
+  }
+  &__left{
+    @include breakpoint(sm){
+      width: 20%;
+      background-color: #f2f2f2;
+      border-right: 1px solid #ddd;
+    }
+  }
+  &__right{
+    @include breakpoint(sm){
+      width: 80%;
+    }
   }
   &__group{
-    border-bottom: 1px solid #ddd;
     padding: 15px 0;
+    animation: opacityShow .5s;
+    display: none;
     @include breakpoint(sm){
       padding: 15px;
     }
-    &:last-child{
-      border-bottom: none;
+    &.active{
+      display: block;
     }
   }
   &__title{
     margin-bottom: 15px;
     h5{
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
-      color: $orange;
+      color: $main-color;
+      margin-bottom: 5px;
     }
     p{
       font-size: 12px;
@@ -148,11 +359,31 @@
       text-overflow: ellipsis;
       overflow: hidden;
       display: block;
+      font-weight: $semibold;
     }
   }
 }
-
 .fly-checkout{
+  &__title{
+    margin-bottom: 30px;
+    &__content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid $main-color;
+      @include breakpoint(xs){
+        position: relative;
+      }
+      h5{
+        font-size: 14px;
+        color: #808080;
+        font-weight: $semibold;
+        @include breakpoint(sm){
+          font-size: 18px;
+        }
+      }
+    }
+  }
   &__form{
     margin-bottom: 30px;
   }

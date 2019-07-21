@@ -8,226 +8,260 @@ html(lang="vi")
         include jades/header.jade
         main.wrapper
             section.fly-checkout
-                .fly-step
+                .note-box
                     .container
-                        .fly-step__row
-                            .fly-step__left
-                                //show desktop
-                                .d-none.d-sm-block
-                                    .step-box
-                                        .step-box__item
-                                            p 1. Select
-                                        .step-box__item.active
-                                            p 2. Book
-                                        .step-box__item
-                                            p 3. Pay
-                                //show-mobile
-                                .d-block.d-sm-none
-                                    .step-box
-                                        .step-box__item
-                                            p 1. Book
-                            .fly-step__right
-                                .edit-search
-                                    i.fas.fa-edit
-                                    span Edit search
-
-
-                .place-box-wrapper
+                        .note-box__content
+                            .note-box__item
+                                i.fas.fa-check-circle
+                                span Selection
+                            .note-box__item
+                                i.fas.fa-place-of-worship
+                                span Review
+                            .note-box__item
+                                i.fas.fa-male
+                                span Passenger details
+                            .note-box__item
+                                i.fas.fa-credit-card
+                                span Payment
+                            .note-box__item
+                                i.fas.fa-tasks
+                                span Confirmation
+                .fly-checkout__title
                     .container
-                        .place-box
-                            .place-box__start
-                                strong Hanoi (HAN)
-                                p Vietnam
-                            .place-box__icon
-                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='29', height='29', viewBox='0 0 29 29')
-                                    g
-                                        g
-                                            image(width='29', height='29', xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAADIUlEQVRIS72WT0gUcRTHv2/800LuLGVGVDizFmIevNihjOoW9JcoKCrKLtKhIitpZ6Vig9odM0uyDkpQpBBEEOahLl2i6GQgkZHZ7khElwx3Jij/zYuZRlvXXGdW7Hca+H3f+/ze+7335kdwsfSotB4CbR6mBbeLQh8MFyYZJeTGgR6Tj4Jwl4jP+0MDV9zYZNK4gg41SkFhnOIAGLn5S8W6vm9zAbuCWgBdld8BKAfouqgkzv4XqBELdjDxITtaUygT6+N92YJdR5pskGuJccMGMbeL4YEj8w7VrwY3wuQXkyCTq8T6gdfZgF1H+l0tCeTC/AzA74Ceioq2bV6hdjE1BF+CecNfEO0SlUSXVzAlVWk7gTYJEDoKlPjbTA4MVW5m4FSKpltUtLWeoUZM3s+EdgB5yM0vytSDyYbgYWK+PwXCVCOGE3e8gO071VXpDEBNBLzxK1rlTA70qFwGAe/T9jX/osJSOtY96hb8BxpdUQghL+EUyWNR0fbYnREpz59wRJHeEY5AMHzyRwAlqQACXfAricvcWpmHrz+nF+fiEcKy/jHah3HLblJgqNJNBp10nA0C+AUgJ8U5ETDMQCGAhWlRWVFOjMZ/dYQPgI9A1QX5o12TAl2VqgB65TZFWep6QNySGulxBt2axRk7+677e4o/QptJ3JoSqdwLYA3A/QzUAjCJYaXFXswYBpEpEFoZKE47XCcTRQm8HCZPOxCDfAwaDKxKPLfu1RYYMWkvEz2yvgUIFTP1q36tdAnGRrS0O2XmnNJA+FO/25ST8yqw+qycGVsDYe3ZjC2jBncC/GRqyqhJDCXq3ALt6tXVYA3Ap8FoFsNaWybjpCpfIuBiimYI5uhqsf6LVe2uF1m9Z9MjMGez0mNSF4h2pOjCoqKps9ml77uuQn6IHCMuaQCtdJx4nkQTcNfQH43BCnOceyZPncXM9QzVG+RqMO45hln9XTxDjZjUwkQnHMPdoqJ1er1Lz1Bdla2nyToAWb8YPEGHYsWLBBKsgS5gDm8jT1DdGQpEeOAPaQezTasnaDImHyBClAVhS+Bc3Pqfzmn9BpxdFKdmdxVyAAAAAElFTkSuQmCC')
-                            .place-box__end
-                                strong Bangkok (BKK)
-                                p Thailand
-
+                        .fly-checkout__title__content
+                            h5 Passenger details
+                            .summary-box
+                                .summary-box__active
+                                    p.p1 Your trip summary
+                                    p.p2 480.000 USD
+                                        i.fas.fa-chevron-down
+                                .summary-box__detail.d-none
+                                    .summary-box__info
+                                        .summary-box__item
+                                            p.p-plane
+                                                img(src='images/icon-outbound-flight.png')
+                                                span Outbound Flight
+                                            .place-box
+                                                .place-box__start
+                                                    p HAN
+                                                        span Hanoi
+                                                .place-box__icon
+                                                    i.fas.fa-arrow-right
+                                                .place-box__end
+                                                    p DOH
+                                                        span Doha
+                                            p.p1 Departure: Sat 27 Jul 2019, 07:00
+                                            p.p1 07:00
+                                            p.p1 Arrival: Sat 27 Jul 2019, 09:10
+                                        .summary-box__item
+                                            p.p-plane
+                                                img(src='images/icon-inbound-flight.png')
+                                                span Inbound Flight
+                                            .place-box
+                                                .place-box__start
+                                                    p HAN
+                                                        span Hanoi
+                                                .place-box__icon
+                                                    i.fas.fa-arrow-right
+                                                .place-box__end
+                                                    p DOH
+                                                        span Doha
+                                            p.p1 Departure: Sat 27 Jul 2019, 07:00
+                                            p.p1 07:00
+                                            p.p1 Arrival: Sat 27 Jul 2019, 09:10
+                                    .summary-box__price
+                                        .d-block
+                                            p.p1 Total trip price
+                                            p.p2 Total price for all passengers
+                                            p.p2 (1 adult)
+                                        .d-block
+                                            p.p-total 558.40 USD
+                                    .summary-box__fare
+                                        .price-breakdown
+                                            p.p-active Price breakdown
+                                            .price-breakdown__box
+                                                .price-breakdown__title
+                                                    | Price breakdown
+                                                .table-responsive
+                                                    table.table
+                                                        thead
+                                                            tr
+                                                                th Passenger type
+                                                                th Adult
+                                                                th Child
+                                                                th Infants
+                                                        tbody
+                                                            tr
+                                                                td Fare
+                                                                td 424.00
+                                                                td &nbsp;
+                                                                td &nbsp;
+                                                            tr.tr-indent
+                                                                td Taxes, Fees & Carrier Charges
+                                                                td 127.40
+                                                                td &nbsp;
+                                                                td &nbsp;
+                                                            tr.tr-indent
+                                                                td Ticketing Fee
+                                                                td 127.40
+                                                                td &nbsp;
+                                                                td &nbsp;
+                                                            tr
+                                                                td Price per passenger
+                                                                td 558.40
+                                                                td &nbsp;
+                                                                td &nbsp;
+                                                            tr
+                                                                td Number of passenger
+                                                                td 1
+                                                                td &nbsp;
+                                                                td &nbsp;
+                                                            tr
+                                                                td Total price
+                                                                td 558.40
+                                                                td &nbsp;
+                                                                td &nbsp;
+                                                            tr.tr-total
+                                                                td.td-title Grand total
+                                                                td.td-price(colspan='3') 558.40 USD
+                                        a(href='#') Fare rules
                 .fly-checkout__form
                     .container
                         .form-checkout
-                            .box-title
-                                p Passenger details
-                            .form-checkout__group
-                                .form-checkout__title
-                                    h5 Adult 1
-                                    p Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised.
-                                .form-checkout__row.row-info
-                                    .form-group.form-group_title
-                                        label
-                                            | Title
-                                            span *
-                                        select.form-control
-                                            option Select 1
-                                            option Select 2
-                                            option Select 3
-                                    .form-group.form-group_first
-                                        label
-                                            | First/Given and Middle Name
-                                            span *
-                                        input.form-control(type='text')
-                                    .form-group.form-group_last
-                                        label
-                                            | Last/Family Name
-                                            span *
-                                        input.form-control(type='text')
-                                    .form-group.form-group_pass
-                                        label
-                                            | Passport Number
-                                            span *
-                                        input.form-control(type='text')
-                                .form-checkout__freq
-                                    .form-checkout__title.add-freq
-                                        h5
-                                            | Add frequent fly
-                                            i.fas.fa-caret-down
-                                    .form-checkout__row.row-card
-                                        .form-group
+                            .form-checkout__left
+                                .checkout-tab
+                                    .checkout-tab__item.active(data-tab = 'tab-1')
+                                        p Adult 1
+                                    .checkout-tab__item(data-tab = 'tab-2')
+                                        p Contact details
+                            .form-checkout__right
+                                .form-checkout__group.active#tab-1
+                                    .form-checkout__title
+                                        h5 Adult 1
+                                        p Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised.
+                                    .form-checkout__row.row-info
+                                        .form-group.form-group_title
+                                            label
+                                                | Title
+                                                span *
                                             select.form-control
-                                                option Vietnam Airline
-                                                option Vietjet Air
-                                                option Ba
+                                                option Select 1
+                                                option Select 2
+                                                option Select 3
+                                        .form-group.form-group_first
+                                            label
+                                                | First/Given and Middle Name
+                                                span *
                                             input.form-control(type='text')
-                                .form-checkout__row.row-date
-                                    .form-group
-                                        label Date of Birth:
-                                        select.form-control
-                                            option Day
-                                            option 1
-                                            option 2
-
-                                        select.form-control
-                                            option Month
-                                            option 1
-                                            option 2
-
-                                        select.form-control
-                                            option Year
-                                            option 1
-                                            option 2
-                                .form-checkout__row.row-gender
-                                    .form-group
-                                        label
-                                            | Gender:
-                                            span *
-                                        .radio
-                                            input(type='radio' id='r1' name='radio')
-                                            label(for='r1') Male
-                                        .radio
-                                            input(type='radio' id='r2' name='radio')
-                                            label(for='r2') Female
-                            .form-checkout__group
-                                .form-checkout__title
-                                    h5 Adult 2
-                                    p Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised.
-                                .form-checkout__row.row-info
-                                    .form-group.form-group_title
-                                        label
-                                            | Title
-                                            span *
-                                        select.form-control
-                                            option Select 1
-                                            option Select 2
-                                            option Select 3
-                                    .form-group.form-group_first
-                                        label
-                                            | First/Given and Middle Name
-                                            span *
-                                        input.form-control(type='text')
-                                    .form-group.form-group_last
-                                        label
-                                            | Last/Family Name
-                                            span *
-                                        input.form-control(type='text')
-                                    .form-group.form-group_pass
-                                        label
-                                            | Passport Number
-                                            span *
-                                        input.form-control(type='text')
-                                .form-checkout__freq
-                                    .form-checkout__title.add-freq
-                                        h5
-                                            | Add frequent fly
-                                            i.fas.fa-caret-down
-                                    .form-checkout__row.row-card
+                                        .form-group.form-group_last
+                                            label
+                                                | Last/Family Name
+                                                span *
+                                            input.form-control(type='text')
+                                        .form-group.form-group_pass
+                                            label
+                                                | Passport Number
+                                                span *
+                                            input.form-control(type='text')
+                                    .form-checkout__freq
+                                        .form-checkout__title.add-freq
+                                            h5
+                                                | Add frequent fly
+                                                i.fas.fa-caret-down
+                                        .form-checkout__row.row-card
+                                            .form-group
+                                                select.form-control
+                                                    option Vietnam Airline
+                                                    option Vietjet Air
+                                                    option Ba
+                                                input.form-control(type='text')
+                                    .form-checkout__row.row-date
                                         .form-group
+                                            label Date of Birth:
                                             select.form-control
-                                                option Vietnam Airline
-                                                option Vietjet Air
-                                                option Ba
+                                                option Day
+                                                option 1
+                                                option 2
+
+                                            select.form-control
+                                                option Month
+                                                option 1
+                                                option 2
+
+                                            select.form-control
+                                                option Year
+                                                option 1
+                                                option 2
+                                    .form-checkout__row.row-gender
+                                        .form-group
+                                            label
+                                                | Gender:
+                                                span *
+                                            .radio
+                                                input(type='radio' id='r1' name='radio')
+                                                label(for='r1') Male
+                                            .radio
+                                                input(type='radio' id='r2' name='radio')
+                                                label(for='r2') Female
+                                .form-checkout__group#tab-2
+                                    .form-checkout__title
+                                        h5 Contact Information
+                                        p (Country Code) + (Area Code) + (Phone Number). Ex: (84) (4) (1234567). Please fill in your mobile phone number to receive notification or any changes in your flight itinerary.
+                                    .form-checkout__row.row-contact
+                                        .form-group
+                                            label
+                                                | Phone Number
+                                                span *
                                             input.form-control(type='text')
-                                .form-checkout__row.row-date
-                                    .form-group
-                                        label Date of Birth:
-                                        select.form-control
-                                            option Day
-                                            option 1
-                                            option 2
-
-                                        select.form-control
-                                            option Month
-                                            option 1
-                                            option 2
-
-                                        select.form-control
-                                            option Year
-                                            option 1
-                                            option 2
-                                .form-checkout__row.row-gender
-                                    .form-group
-                                        label
-                                            | Gender:
-                                            span *
-                                        .radio
-                                            input(type='radio' id='r3' name='radio')
-                                            label(for='r3') Male
-                                        .radio
-                                            input(type='radio' id='r4' name='radio')
-                                            label(for='r4') Female
-
-
-                        .form-checkout
-                            .box-title
-                                p Contact Information
-                            .form-checkout__group
-                                .form-checkout__text
-                                    p (Country Code) + (Area Code) + (Phone Number). Ex: (84) (4) (1234567)
-                                    p Please fill in your mobile phone number to receive notification or any changes in your flight itinerary.
-                                .form-checkout__row.row-contact
-                                    .form-group
-                                        label
-                                            | Phone Number
-                                            span *
-                                        input.form-control(type='text')
-                                    .form-group
-                                        label
-                                            | Email address
-                                            span *
-                                        input.form-control(type='text')
-                                    .form-group
-                                        label
-                                            | Confirm email address
-                                            span *
-                                        input.form-control(type='text')
-                                .form-checkout__row.row-textarea
-                                    .form-group
-                                        label Special Request
-                                        textarea.form-control
+                                        .form-group
+                                            label
+                                                | Email address
+                                                span *
+                                            input.form-control(type='text')
+                                        .form-group
+                                            label
+                                                | Confirm email address
+                                                span *
+                                            input.form-control(type='text')
+                                    .form-checkout__row.row-textarea
+                                        .form-group
+                                            label Special Request
+                                            textarea.form-control
                         .fly-checkout__btn
-                            a.btn.btn-orange.btn-round(href='fly-review.html') Continue
+                            a.btn.btn-blue Continue
         include jades/footer.jade
         script(type='text/javascript' src="js/jquery-3.3.1.min.js")
         script(type='text/javascript' src="js/popper.min.js")
         script(type='text/javascript' src="js/bootstrap.min.js")
-        script(type='text/javascript' src="js/slick.min.js")
+        script.
+            $('.nav-link').click(function () {
+
+                $(this).next('.nav-sub').slideToggle(400);
+                $('.nav-item.active .nav-sub').slideUp(400);
+
+                $(this).parent('.nav-item').toggleClass('active');
+                $(this).parent('.nav-item').siblings().removeClass('active');
+
+
+            });
         script.
             $('.add-freq h5').click(function () {
                 $(this).parents('.form-checkout__freq').toggleClass('rotate');
                 $(this).parents('.form-checkout__freq').find('.row-card').slideToggle(400);
+            });
+
+            $('.summary-box__active').click(function () {
+                $('.summary-box__detail').toggleClass('d-none');
+            });
+        script.
+            //click dashboard-tab for mobi
+            $(".checkout-tab__item").click(function () {
+                var tab_id = $(this).attr('data-tab');
+                $('.checkout-tab__item').removeClass('active');
+                $('.form-checkout__group').removeClass('active');
+
+                $(this).addClass('active');
+                $("#" + tab_id).addClass('active');
             });
 
 
